@@ -92,6 +92,14 @@ Product-specific business widgets should remain in the consuming application.
 
 ## Platform adapters
 
+All adapters expose the same 151-system catalog and complete 38-component
+inventory:
+
+- Flutter: `AnduraTheme.forSystem('linear-app')`
+- React: `<DesignSystemProvider systemId="linear-app">`
+- Compose: `AnduraDesignSystemTheme(AnduraDesignSystems.byId("linear-app"))`
+- SwiftUI: `.anduraDesignSystem("linear-app")`
+
 The React adapter is available in `packages/react` with native React components,
 CSS tokens, Vitest/Testing Library coverage, and an interactive showcase. Run
 its checks with:

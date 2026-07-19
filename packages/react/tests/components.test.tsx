@@ -1,7 +1,34 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { axe } from 'jest-axe';
 import { describe, expect, it, vi } from 'vitest';
-import { Badge, Button, Dialog, TextArea } from '../src';
+import {
+  Alert,
+  Badge,
+  Button,
+  DesignSystemProvider,
+  Dialog,
+  KeyboardKey,
+  Progress,
+  TextArea,
+  designSystems,
+  getDesignSystem,
+} from '../src';
+
+it('exports all design systems and applies semantic variables', () => {
+  expect(designSystems).toHaveLength(151);
+  expect(getDesignSystem('linear-app').name).toBe('Linear');
+  render(<DesignSystemProvider systemId="linear-app"><Button>Continue</Button></DesignSystemProvider>);
+  const provider = screen.getByText('Continue').parentElement;
+  expect(provider).toHaveAttribute('data-andura-design-system', 'linear-app');
+  expect(provider?.style.getPropertyValue('--andura-accent')).not.toBe('');
+});
+
+it('renders extended component coverage', () => {
+  render(<><Alert intent="success">Saved</Alert><KeyboardKey>⌘ K</KeyboardKey><Progress value={0.5} label="Coverage" /></>);
+  expect(screen.getByText('Saved')).toBeInTheDocument();
+  expect(screen.getByText('⌘ K')).toBeInTheDocument();
+  expect(screen.getByText('50%')).toBeInTheDocument();
+});
 
 it('renders loading and disabled button states', () => {
   render(<Button loading>Save</Button>);

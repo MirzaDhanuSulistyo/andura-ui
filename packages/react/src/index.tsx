@@ -16,6 +16,9 @@ import {
 } from 'react';
 import './styles.css';
 
+export * from './design-system-provider';
+export * from './extended';
+
 export type ButtonVariant = 'primary' | 'secondary' | 'danger' | 'ghost';
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
@@ -41,6 +44,10 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(function Card({ intera
 
 export const Input = forwardRef<HTMLInputElement, InputHTMLAttributes<HTMLInputElement>>(function Input({ className = '', ...props }, ref) {
   return <input ref={ref} className={`andura-control ${className}`} {...props} />;
+});
+
+export const PasswordField = forwardRef<HTMLInputElement, InputHTMLAttributes<HTMLInputElement>>(function PasswordField(props, ref) {
+  return <Input ref={ref} type="password" autoComplete="current-password" {...props} />;
 });
 
 export interface FieldProps { label?: string; error?: string; helper?: string; children: ReactNode; }
@@ -109,4 +116,8 @@ export function CheckOption({ label, checked, onChange, disabled = false }: { la
 
 export function SettingsTile({ title, onClick, children }: { title: string; onClick?: () => void; children?: ReactNode }) {
   return <button className="andura-settings-tile" onClick={onClick}><span>{title}</span>{children ?? '›'}</button>;
+}
+
+export function Page({ className = '', ...props }: HTMLAttributes<HTMLElement>) {
+  return <main className={`andura-page andura-container ${className}`.trim()} {...props} />;
 }

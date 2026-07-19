@@ -7,6 +7,8 @@
   progress, skeletons, accordions, stats, menus, bottom sheets, and responsive
   layout primitives.
 - Add a reproducible catalog importer and complete component coverage report.
+- Generate the complete catalog for React, Jetpack Compose, and SwiftUI.
+- Add the 19 expanded components and contextual theming across all adapters.
 
 ## 0.1.0
 

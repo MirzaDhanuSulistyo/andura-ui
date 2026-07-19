@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
-"""Import the Open Design catalog into Andura's Flutter theme catalog.
+"""Import Open Design into Andura's cross-platform theme catalogs.
 
 Usage:
   python3 scripts/import_open_design.py [path/to/open-design/design-systems]
 
-The importer deliberately stores normalized semantic values rather than web CSS.
+The importer stores normalized semantic values and generates Dart, TypeScript,
+Kotlin, and Swift catalogs rather than copying web CSS directly.
 The original manifests remain the source of truth and are never modified.
 """
 from __future__ import annotations
 
 import json
 import re
+import shutil
+import subprocess
 import sys
 from collections import Counter
 from pathlib import Path
@@ -19,6 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE = Path.home() / "code/open-design/design-systems"
 SOURCE = Path(sys.argv[1]).expanduser().resolve() if len(sys.argv) > 1 else DEFAULT_SOURCE
 OUT_DART = ROOT / "lib/src/theme/generated_design_systems.dart"
+OUT_CATALOG = ROOT / "design_systems/catalog.json"
 OUT_JSON = ROOT / "docs/open_design_audit.json"
 OUT_MD = ROOT / "docs/open_design_audit.md"
 
@@ -243,6 +247,20 @@ lines = [
 ]
 OUT_DART.parent.mkdir(parents=True, exist_ok=True)
 OUT_DART.write_text("\n".join(lines))
+dart = shutil.which("dart")
+if dart:
+    subprocess.run(
+        [dart, "format", str(OUT_DART), str(chunk_dir)],
+        check=True,
+        stdout=subprocess.DEVNULL,
+    )
+
+OUT_CATALOG.parent.mkdir(parents=True, exist_ok=True)
+OUT_CATALOG.write_text(json.dumps({
+    "schemaVersion": "andura-design-systems/v1",
+    "source": "open-design/design-systems",
+    "systems": systems,
+}, indent=2) + "\n")
 
 audit = {
     "schemaVersion": 1,
@@ -289,4 +307,12 @@ OUT_MD.write_text("\n".join([
     "The manifests expose nine normalized reference groups. Brand-specific CSS classes are recipes and page compositions, not stable reusable component APIs. See `open_design_audit.json` for the complete 151-system matrix and the most common source classes.",
     "",
 ]))
-print(f"Imported {len(systems)} systems; wrote {OUT_DART.relative_to(ROOT)}, {OUT_JSON.relative_to(ROOT)}, and {OUT_MD.relative_to(ROOT)}")
+subprocess.run(
+    [sys.executable, str(ROOT / "scripts/generate_platform_catalogs.py")],
+    check=True,
+)
+print(
+    f"Imported {len(systems)} systems; wrote {OUT_CATALOG.relative_to(ROOT)}, "
+    f"{OUT_DART.relative_to(ROOT)}, {OUT_JSON.relative_to(ROOT)}, and "
+    f"{OUT_MD.relative_to(ROOT)}"
+)

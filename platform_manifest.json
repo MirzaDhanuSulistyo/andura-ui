@@ -1,9 +1,32 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
+  "catalog": {
+    "source": "design_systems/catalog.json",
+    "expectedSystems": 151
+  },
   "adapters": {
-    "flutter": {"source": "lib", "implemented": "all"},
-    "react": {"source": "packages/react/src/index.tsx", "implemented": "all"},
-    "compose": {"source": "packages/compose/andura/src/main/kotlin/com/andura/ui/AnduraComponents.kt", "implemented": ["AnduraButton", "AnduraIconButton", "AnduraCard", "AnduraBadge", "AnduraDialog", "AnduraTextField", "AnduraTextArea", "AnduraSelect", "AnduraPasswordField", "AnduraChoiceRow", "AnduraCheckOption", "AnduraSettingsTile", "AnduraPage", "AnduraSearchField", "AnduraEmptyState", "AnduraLoadingOverlay", "AnduraErrorText", "AnduraUserAvatar", "AnduraNotificationButton"]},
-    "swift": {"source": "packages/swift/AnduraComponents.swift", "implemented": ["AnduraButton", "AnduraIconButton", "AnduraCard", "AnduraBadge", "AnduraDialog", "AnduraTextField", "AnduraTextArea", "AnduraSelect", "AnduraPasswordField", "AnduraChoiceRow", "AnduraCheckOption", "AnduraSettingsTile", "AnduraPage", "AnduraSearchField", "AnduraEmptyState", "AnduraLoadingOverlay", "AnduraErrorText", "AnduraUserAvatar", "AnduraNotificationButton"]}
+    "flutter": {
+      "source": "lib",
+      "catalogSource": "lib/src/theme/generated_design_systems.dart",
+      "implemented": "all"
+    },
+    "react": {
+      "source": "packages/react/src/index.tsx",
+      "extendedSource": "packages/react/src/extended.tsx",
+      "catalogSource": "packages/react/src/design-systems/index.ts",
+      "implemented": "all"
+    },
+    "compose": {
+      "source": "packages/compose/andura/src/main/kotlin/com/andura/ui/AnduraComponents.kt",
+      "extendedSource": "packages/compose/andura/src/main/kotlin/com/andura/ui/AnduraExtendedComponents.kt",
+      "catalogSource": "packages/compose/andura/src/main/kotlin/com/andura/ui/designsystems/AnduraDesignSystems.kt",
+      "implemented": "all"
+    },
+    "swift": {
+      "source": "packages/swift/AnduraComponents.swift",
+      "extendedSource": "packages/swift/AnduraExtendedComponents.swift",
+      "catalogSource": "packages/swift/Generated/AnduraDesignSystems.swift",
+      "implemented": "all"
+    }
   }
 }

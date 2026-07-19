@@ -5,16 +5,27 @@ plugins {
     id("maven-publish")
 }
 
-android { namespace = "com.andura.ui"; compileSdk = 35 }
+android {
+    namespace = "com.andura.ui"
+    compileSdk = 35
+    defaultConfig { minSdk = 21 }
+    publishing { singleVariant("release") }
+}
 
 kotlin { jvmToolchain(17) }
 
 android { buildFeatures { compose = true } }
 
 group = "com.andura.ui"
-version = "0.1.0"
+version = "0.2.0"
 
-publishing { publications { create<MavenPublication>("release") { from(components["release"]) } } }
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") { from(components["release"]) }
+        }
+    }
+}
 
 dependencies {
     implementation(platform("androidx.compose:compose-bom:2025.01.00"))

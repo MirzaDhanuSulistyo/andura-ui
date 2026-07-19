@@ -1,19 +1,33 @@
 # Andura platform packages
 
-These directories contain generated token outputs and platform-native adapter work.
+All adapters consume the same platform-neutral catalog in
+`design_systems/catalog.json` and cover the complete 38-component contract.
 
-- `react/` — React components, tests, CSS tokens, and interactive showcase
-- `react/tokens.css` — CSS custom properties for React/web consumers
-- `compose/AnduraTokens.kt` — Kotlin token constants for Jetpack Compose
-- `swift/AnduraTokens.swift` — Swift token constants for SwiftUI/UIKit
+- `react/` — React components, contextual CSS variables, tests, and 151 themes
+- `compose/andura/` — Jetpack Compose components, Material theme adapter, and 151 themes
+- `swift/` — SwiftUI components, environment theme modifier, and 151 themes
 
-The React package currently covers the core component contract: buttons,
-icon buttons, cards, fields, text areas, selects, dialogs, badges, search,
-empty, loading, avatars, notifications, settings, choice, and check controls.
-It includes production ESM/CJS builds, typed token exports, visual showcase
-code, and axe-based accessibility tests.
+Platform theme entry points:
 
-Regenerate all outputs with:
+```tsx
+<DesignSystemProvider systemId="linear-app">…</DesignSystemProvider>
+```
+
+```kotlin
+AnduraDesignSystemTheme(AnduraDesignSystems.byId("linear-app")) { /* … */ }
+```
+
+```swift
+ContentView().anduraDesignSystem("linear-app")
+```
+
+Refresh Open Design and every generated catalog with:
+
+```sh
+python3 scripts/import_open_design.py ~/code/open-design/design-systems
+```
+
+Regenerate the original Andura token outputs with:
 
 ```sh
 python3 scripts/generate_tokens.py
