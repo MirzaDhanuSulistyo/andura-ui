@@ -1,6 +1,6 @@
 # Andura UI
 
-A reusable Flutter design system for Andura applications. It provides a consistent Poppins-based theme, design tokens, responsive page layouts, accessible form controls, cards, buttons, feedback states, and navigation elements.
+A reusable Flutter design system for Andura applications. It provides a consistent Poppins-based theme, design tokens, responsive page layouts, accessible form controls, cards, buttons, dialogs, badges, feedback states, and navigation elements.
 
 ## Install
 
@@ -51,6 +51,8 @@ flutter run
 
 - `foundations`: colors, spacing, radii, sizing, typography, and motion
 - `theme`: coordinated light and dark Material 3 themes
-- `components`: buttons, cards, fields, selectors, states, and page layouts
+- `components`: buttons, cards, fields, text areas, selects, dialogs, badges, selectors, states, and page layouts
+
+Components expose disabled, loading, error, helper, and focus-friendly states where applicable. Shared token categories include semantic colors, spacing, radii, sizing, typography, motion, elevation, and responsive layout values.
 
 Product-specific business widgets should remain in the consuming application. Contributions and issues are welcome in the [public repository](https://github.com/MirzaDhanuSulistyo/andura-ui).

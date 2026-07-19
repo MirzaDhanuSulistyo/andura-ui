@@ -53,14 +53,75 @@ class AnduraButton extends StatelessWidget {
           );
     final button = SizedBox(
       height: AnduraSizes.control,
-      child: ElevatedButton(
-        onPressed: loading ? null : onPressed,
-        style: ElevatedButton.styleFrom(backgroundColor: background),
-        child: content,
+      child: Semantics(
+        button: true,
+        enabled: !loading && onPressed != null,
+        label: loading ? '$label, loading' : label,
+        child: ElevatedButton(
+          onPressed: loading ? null : onPressed,
+          style: ElevatedButton.styleFrom(backgroundColor: background),
+          child: content,
+        ),
       ),
     );
     return expand ? SizedBox(width: double.infinity, child: button) : button;
   }
+}
+
+class AnduraBadge extends StatelessWidget {
+  const AnduraBadge({super.key, required this.label, this.color});
+
+  final String label;
+  final Color? color;
+
+  @override
+  Widget build(BuildContext context) {
+    final badgeColor = color ?? Theme.of(context).colorScheme.primaryContainer;
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        color: badgeColor,
+        borderRadius: BorderRadius.circular(AnduraRadii.pill),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: AnduraSpacing.md,
+          vertical: AnduraSpacing.xs,
+        ),
+        child: Text(
+          label,
+          style: AnduraTextStyles.caption.copyWith(
+            color: Theme.of(context).colorScheme.onPrimaryContainer,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class AnduraDialog extends StatelessWidget {
+  const AnduraDialog({super.key, this.title, this.content, this.actions});
+
+  final Widget? title;
+  final Widget? content;
+  final List<Widget>? actions;
+
+  static Future<T?> show<T>({
+    required BuildContext context,
+    Widget? title,
+    Widget? content,
+    List<Widget>? actions,
+    bool barrierDismissible = true,
+  }) => showDialog<T>(
+    context: context,
+    barrierDismissible: barrierDismissible,
+    builder: (_) =>
+        AnduraDialog(title: title, content: content, actions: actions),
+  );
+
+  @override
+  Widget build(BuildContext context) =>
+      AlertDialog(title: title, content: content, actions: actions);
 }
 
 class AnduraIconButton extends StatelessWidget {

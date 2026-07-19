@@ -18,6 +18,13 @@ class AnduraTextField extends StatelessWidget {
     this.textInputAction,
     this.onChanged,
     this.onSubmitted,
+    this.enabled = true,
+    this.readOnly = false,
+    this.errorText,
+    this.helperText,
+    this.maxLines = 1,
+    this.minLines,
+    this.maxLength,
   });
 
   final TextEditingController? controller;
@@ -33,6 +40,13 @@ class AnduraTextField extends StatelessWidget {
   final TextInputAction? textInputAction;
   final ValueChanged<String>? onChanged;
   final ValueChanged<String>? onSubmitted;
+  final bool enabled;
+  final bool readOnly;
+  final String? errorText;
+  final String? helperText;
+  final int? maxLines;
+  final int? minLines;
+  final int? maxLength;
 
   @override
   Widget build(BuildContext context) => TextField(
@@ -45,12 +59,81 @@ class AnduraTextField extends StatelessWidget {
     textInputAction: textInputAction,
     onChanged: onChanged,
     onSubmitted: onSubmitted,
+    enabled: enabled,
+    readOnly: readOnly,
+    maxLines: maxLines,
+    minLines: minLines,
+    maxLength: maxLength,
     decoration: InputDecoration(
       hintText: hintText,
       labelText: labelText,
       prefixIcon: prefixIcon,
       suffixIcon: suffixIcon,
+      errorText: errorText,
+      helperText: helperText,
     ),
+  );
+}
+
+class AnduraTextArea extends StatelessWidget {
+  const AnduraTextArea({
+    super.key,
+    this.controller,
+    this.hintText,
+    this.labelText,
+    this.errorText,
+    this.onChanged,
+    this.minLines = 3,
+    this.maxLines = 6,
+    this.enabled = true,
+  });
+
+  final TextEditingController? controller;
+  final String? hintText;
+  final String? labelText;
+  final String? errorText;
+  final ValueChanged<String>? onChanged;
+  final int minLines;
+  final int maxLines;
+  final bool enabled;
+
+  @override
+  Widget build(BuildContext context) => AnduraTextField(
+    controller: controller,
+    hintText: hintText,
+    labelText: labelText,
+    errorText: errorText,
+    onChanged: onChanged,
+    minLines: minLines,
+    maxLines: maxLines,
+    enabled: enabled,
+  );
+}
+
+class AnduraSelect<T> extends StatelessWidget {
+  const AnduraSelect({
+    super.key,
+    required this.value,
+    required this.items,
+    this.labelText,
+    this.errorText,
+    this.onChanged,
+    this.enabled = true,
+  });
+
+  final T? value;
+  final List<DropdownMenuItem<T>> items;
+  final String? labelText;
+  final String? errorText;
+  final ValueChanged<T?>? onChanged;
+  final bool enabled;
+
+  @override
+  Widget build(BuildContext context) => DropdownButtonFormField<T>(
+    initialValue: value,
+    items: items,
+    onChanged: enabled ? onChanged : null,
+    decoration: InputDecoration(labelText: labelText, errorText: errorText),
   );
 }
 
@@ -111,12 +194,14 @@ class AnduraChoiceRow<T> extends StatelessWidget {
     required this.selected,
     required this.label,
     required this.onSelected,
+    this.enabled = true,
   });
 
   final List<T> values;
   final T selected;
   final String Function(T value) label;
   final ValueChanged<T> onSelected;
+  final bool enabled;
 
   @override
   Widget build(BuildContext context) => Row(
@@ -125,10 +210,11 @@ class AnduraChoiceRow<T> extends StatelessWidget {
         Expanded(
           child: Semantics(
             button: true,
+            enabled: enabled,
             selected: value == selected,
             label: label(value),
             child: InkWell(
-              onTap: () => onSelected(value),
+              onTap: enabled ? () => onSelected(value) : null,
               borderRadius: BorderRadius.circular(AnduraRadii.md),
               child: AnimatedContainer(
                 duration: AnduraMotion.fast,
@@ -164,15 +250,17 @@ class AnduraCheckOption extends StatelessWidget {
     required this.label,
     required this.value,
     required this.onChanged,
+    this.enabled = true,
   });
 
   final String label;
   final bool value;
   final ValueChanged<bool> onChanged;
+  final bool enabled;
 
   @override
   Widget build(BuildContext context) => InkWell(
-    onTap: () => onChanged(!value),
+    onTap: enabled ? () => onChanged(!value) : null,
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [

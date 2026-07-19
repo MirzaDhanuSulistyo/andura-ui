@@ -35,8 +35,15 @@ abstract final class AnduraTheme {
       base.textTheme,
     ).apply(bodyColor: scheme.onSurface, displayColor: scheme.onSurface);
 
+    final themedText = text.copyWith(
+      titleLarge: text.titleLarge?.merge(AnduraTextStyles.title),
+      titleMedium: text.titleMedium?.merge(AnduraTextStyles.section),
+      labelLarge: text.labelLarge?.merge(AnduraTextStyles.label),
+      bodySmall: text.bodySmall?.merge(AnduraTextStyles.caption),
+    );
+
     return base.copyWith(
-      textTheme: text,
+      textTheme: themedText,
       appBarTheme: AppBarTheme(
         backgroundColor: scheme.surface,
         foregroundColor: scheme.onSurface,
@@ -84,7 +91,7 @@ abstract final class AnduraTheme {
       snackBarTheme: SnackBarThemeData(
         behavior: SnackBarBehavior.floating,
         backgroundColor: scheme.surfaceContainerHighest,
-        contentTextStyle: text.bodyMedium?.copyWith(
+        contentTextStyle: themedText.bodyMedium?.copyWith(
           color: scheme.onSurface,
           fontWeight: FontWeight.w500,
         ),
@@ -103,7 +110,13 @@ abstract final class AnduraTheme {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: scheme.surfaceContainerHighest,
-        hintStyle: text.bodyMedium?.copyWith(color: scheme.onSurfaceVariant),
+        hintStyle: themedText.bodyMedium?.copyWith(
+          color: scheme.onSurfaceVariant,
+        ),
+        errorStyle: themedText.bodySmall?.copyWith(color: scheme.error),
+        helperStyle: themedText.bodySmall?.copyWith(
+          color: scheme.onSurfaceVariant,
+        ),
         contentPadding: const EdgeInsets.symmetric(
           horizontal: 20,
           vertical: 16,

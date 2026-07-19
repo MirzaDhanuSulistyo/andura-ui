@@ -33,11 +33,20 @@ abstract final class AnduraSizes {
 abstract final class AnduraElevation {
   static const card = 0.0;
   static const floating = 8.0;
+  static const dialog = 24.0;
+}
+
+abstract final class AnduraLayout {
+  static const maxContentWidth = 1200.0;
+  static const desktopGutter = 36.0;
+  static const tabletGutter = 24.0;
+  static const phoneGutter = 16.0;
 }
 
 abstract final class AnduraMotion {
   static const fast = Duration(milliseconds: 150);
   static const standard = Duration(milliseconds: 250);
+  static const curve = Curves.easeOutCubic;
 }
 
 abstract final class AnduraTextStyles {
