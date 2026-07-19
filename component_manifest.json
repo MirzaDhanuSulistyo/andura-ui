@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "package": "andura_ui",
+  "platform": "flutter",
+  "description": "Implementation inventory for the Andura Flutter design system.",
+  "sourceOfTruth": "lib/andura_ui.dart",
+  "components": [
+    {
+      "name": "AnduraButton",
+      "category": "actions",
+      "variants": ["primary", "secondary", "danger"],
+      "states": ["default", "disabled", "loading"],
+      "accessibility": ["semantic button label", "disabled state"]
+    },
+    {
+      "name": "AnduraIconButton",
+      "category": "actions",
+      "states": ["default", "disabled", "focused"],
+      "accessibility": ["tooltip recommended", "44dp minimum tap target"]
+    },
+    {
+      "name": "AnduraBadge",
+      "category": "status",
+      "states": ["default"],
+      "accessibility": ["label is exposed as text"]
+    },
+    {
+      "name": "AnduraCard",
+      "category": "surfaces",
+      "states": ["static", "interactive"],
+      "accessibility": ["interactive cards require an onTap action label from the host"]
+    },
+    {
+      "name": "AnduraDialog",
+      "category": "feedback",
+      "states": ["open", "dismissible", "modal"],
+      "accessibility": ["uses Flutter dialog semantics", "actions must have labels"]
+    },
+    {
+      "name": "AnduraTextField",
+      "category": "forms",
+      "states": ["default", "focused", "disabled", "readOnly", "error", "helper"],
+      "accessibility": ["labelText recommended", "errorText exposed by InputDecoration"]
+    },
+    {
+      "name": "AnduraTextArea",
+      "category": "forms",
+      "states": ["default", "focused", "disabled", "error"],
+      "accessibility": ["labelText recommended", "multiline semantics"]
+    },
+    {
+      "name": "AnduraSelect",
+      "category": "forms",
+      "states": ["default", "expanded", "disabled", "error"],
+      "accessibility": ["uses Flutter dropdown semantics", "labelText recommended"]
+    },
+    {
+      "name": "AnduraPasswordField",
+      "category": "forms",
+      "states": ["obscured", "visible", "focused"],
+      "accessibility": ["visibility action has a tooltip"]
+    },
+    {
+      "name": "AnduraChoiceRow",
+      "category": "forms",
+      "states": ["selected", "unselected", "disabled"],
+      "accessibility": ["selected state exposed through Semantics"]
+    },
+    {
+      "name": "AnduraCheckOption",
+      "category": "forms",
+      "states": ["checked", "unchecked", "disabled"],
+      "accessibility": ["label and enabled state required"]
+    },
+    {
+      "name": "AnduraSettingsTile",
+      "category": "navigation",
+      "states": ["static", "interactive"],
+      "accessibility": ["ListTile semantics", "trailing action should be labelled"]
+    },
+    {
+      "name": "AnduraPage",
+      "category": "layout",
+      "states": ["scrollable", "static", "with navigation", "with floating action"],
+      "accessibility": ["uses Scaffold and SafeArea"]
+    },
+    {
+      "name": "AnduraSearchField",
+      "category": "layout",
+      "states": ["default", "with filter action"],
+      "accessibility": ["filter action has a tooltip"]
+    },
+    {
+      "name": "AnduraEmptyState",
+      "category": "feedback",
+      "states": ["default"],
+      "accessibility": ["message is exposed as text"]
+    },
+    {
+      "name": "AnduraLoadingOverlay",
+      "category": "feedback",
+      "states": ["idle", "loading"],
+      "accessibility": ["loading indicator follows Flutter semantics"]
+    },
+    {
+      "name": "AnduraErrorText",
+      "category": "feedback",
+      "states": ["error"],
+      "accessibility": ["message is exposed as text"]
+    },
+    {
+      "name": "AnduraUserAvatar",
+      "category": "navigation",
+      "states": ["initials", "image", "interactive"],
+      "accessibility": ["interactive avatar exposes profile button semantics"]
+    },
+    {
+      "name": "AnduraNotificationButton",
+      "category": "navigation",
+      "states": ["read", "unread", "disabled"],
+      "accessibility": ["Notifications tooltip"]
+    }
+  ],
+  "foundations": {
+    "colors": "lib/src/foundations/andura_colors.dart",
+    "tokens": "lib/src/foundations/andura_tokens.dart",
+    "theme": "lib/src/theme/andura_theme.dart"
+  }
+}

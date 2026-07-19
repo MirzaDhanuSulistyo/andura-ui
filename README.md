@@ -49,9 +49,10 @@ flutter run
 
 ## Package structure
 
-- `foundations`: colors, spacing, radii, sizing, typography, and motion
+- `foundations`: colors, spacing, radii, sizing, typography, motion, elevation, and layout tokens
 - `theme`: coordinated light and dark Material 3 themes
 - `components`: buttons, cards, fields, text areas, selects, dialogs, badges, selectors, states, and page layouts
+- `component_manifest.json`: machine-readable component, variant, state, and accessibility inventory
 
 Components expose disabled, loading, error, helper, and focus-friendly states where applicable. Shared token categories include semantic colors, spacing, radii, sizing, typography, motion, elevation, and responsive layout values.
 
