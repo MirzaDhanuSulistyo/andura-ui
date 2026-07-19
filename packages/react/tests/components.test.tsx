@@ -23,6 +23,21 @@ it('exports all design systems and applies semantic variables', () => {
   expect(provider?.style.getPropertyValue('--andura-accent')).not.toBe('');
 });
 
+it('applies an app-local design system without catalog registration', () => {
+  const custom = {
+    ...getDesignSystem('default'),
+    id: 'acme',
+    name: 'Acme',
+    accent: '#6750a4',
+  };
+  render(<DesignSystemProvider system={custom}><Button>Custom</Button></DesignSystemProvider>);
+  const provider = screen.getByText('Custom').parentElement;
+
+  expect(provider).toHaveAttribute('data-andura-design-system', 'acme');
+  expect(provider?.style.getPropertyValue('--andura-accent')).toBe('#6750a4');
+  expect(designSystems).not.toContain(custom);
+});
+
 it('renders extended component coverage', () => {
   render(<><Alert intent="success">Saved</Alert><KeyboardKey>⌘ K</KeyboardKey><Progress value={0.5} label="Coverage" /></>);
   expect(screen.getByText('Saved')).toBeInTheDocument();

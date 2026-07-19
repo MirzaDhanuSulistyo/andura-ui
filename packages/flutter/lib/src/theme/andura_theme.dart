@@ -23,8 +23,17 @@ abstract final class AnduraTheme {
   ///
   /// When [brightness] differs from the system's native canvas, Material
   /// derives accessible surfaces while retaining its identity accent.
-  static ThemeData forSystem(String id, [Brightness? brightness]) {
-    final system = AnduraDesignSystems.byId(id);
+  static ThemeData forSystem(String id, [Brightness? brightness]) =>
+      fromSystem(AnduraDesignSystems.byId(id), brightness);
+
+  /// Creates a Material theme from a bundled or app-local design system.
+  ///
+  /// This is additive to [forSystem]: custom systems do not need to be added to
+  /// Andura's generated catalog.
+  static ThemeData fromSystem(
+    AnduraDesignSystem system, [
+    Brightness? brightness,
+  ]) {
     final preferred = system.nativeBrightness == AnduraNativeBrightness.dark
         ? Brightness.dark
         : Brightness.light;

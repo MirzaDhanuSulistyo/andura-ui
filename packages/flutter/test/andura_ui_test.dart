@@ -17,6 +17,21 @@ void main() {
     expect(theme.colorScheme.primary, tokens.accent);
   });
 
+  test('app-local systems create themes without catalog registration', () {
+    final custom = AnduraDesignSystems.byId('default').copyWith(
+      id: 'acme',
+      name: 'Acme',
+      accent: 0xFF6750A4,
+      accentOn: 0xFFFFFFFF,
+    );
+    final theme = AnduraTheme.fromSystem(custom, Brightness.light);
+    final tokens = theme.extension<AnduraThemeTokens>();
+
+    expect(tokens?.systemId, 'acme');
+    expect(theme.colorScheme.primary, const Color(0xFF6750A4));
+    expect(AnduraDesignSystems.all, isNot(contains(custom)));
+  });
+
   testWidgets('components support ordinary Material themes', (tester) async {
     await tester.pumpWidget(
       const MaterialApp(

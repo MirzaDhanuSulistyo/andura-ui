@@ -10,7 +10,8 @@ Before implementation:
 2. Read the target adapter's `AGENTS.md` completely.
 3. Inspect the adapter's public exports, examples, manifest, component signatures, token/theme APIs, and required runtime versions.
 4. Check the consuming project's existing dependency and theme configuration.
-5. Select one approved visual-system ID. Do not mix visual systems within a product unless the product explicitly supports theme selection.
+5. Select one approved bundled visual-system ID or one approved app-local custom system. Do not mix visual systems within a product unless the product explicitly supports theme selection.
+6. When the user needs a branded app-local system, follow the `andura-ds-builder` skill if available rather than changing Andura's generated catalog.
 
 Current adapters live under:
 
@@ -37,7 +38,7 @@ Always verify relative paths from the consuming project rather than copying this
 
 Use Andura public components for shared UI concerns such as actions, cards/surfaces, forms, settings rows, feedback, filters, navigation helpers, progress, list items, responsive layout, loading, and empty states.
 
-Create a product component only when it combines domain data or interaction in a way that is not a general design-system primitive, for example:
+Create a product component only when it combines domain data or interaction in a way that is not a general design-system primitive. Follow the `andura-component-builder` skill if available. Examples include:
 
 - live network-speed panel;
 - monthly plan summary;

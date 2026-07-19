@@ -103,23 +103,78 @@ kept as recipes rather than treated as stable component APIs. Imported systems
 are aesthetic inspirations and are not official brand packages; source
 attribution remains in the upstream Open Design manifests.
 
-## AI app builder skill
+## App-local custom design systems
 
-Andura includes a project-level Agent Skill that turns an app idea into a product brief, feasibility assessment, PRD, screen inventory, Andura UI proof, architecture, and phase-by-phase vertical slices.
+Applications can create a custom system from a bundled baseline without
+forking Andura or changing the generated catalog:
 
-Inside this repository, restart the agent so it discovers the skill, then run:
+```dart
+final acme = AnduraDesignSystems.byId('default').copyWith(
+  id: 'acme',
+  name: 'Acme',
+  accent: 0xFF6750A4,
+  accentOn: 0xFFFFFFFF,
+);
+
+MaterialApp(theme: AnduraTheme.fromSystem(acme));
+```
+
+```tsx
+const acme: AnduraDesignSystem = {
+  ...getDesignSystem('default'),
+  id: 'acme',
+  name: 'Acme',
+  accent: '#6750a4',
+};
+
+<DesignSystemProvider system={acme}>…</DesignSystemProvider>
+```
+
+```kotlin
+val acme = AnduraDesignSystems.defaultSystem.copy(
+    id = "acme", name = "Acme", accent = 0xFF6750A4u,
+)
+AnduraDesignSystemTheme(acme) { /* … */ }
+```
+
+```swift
+let acme = AnduraDesignSystems.defaultSystem.copyWith(
+    id: "acme", name: "Acme", accent: 0xFF6750A4
+)
+ContentView().anduraDesignSystem(acme)
+```
+
+These objects remain owned by the consuming application and are not added to
+`AnduraDesignSystems.all` or `designSystems`. Fonts must be bundled or loaded by
+the consuming application.
+
+## AI builder skills
+
+Andura includes project-level Agent Skills for app delivery, app-local design
+systems, and component creation:
+
+- `app-builder` — product brief through phased implementation;
+- `andura-ds-builder` — creates and validates an app-local branded system;
+- `andura-component-builder` — builds product compositions or prepares a
+  cross-platform shared primitive contribution.
+
+Inside this repository, restart the agent so it discovers the skills, then run:
 
 ```text
 /skill:app-builder Build a Flutter app for <idea>. The core feature is <feature>.
+/skill:andura-ds-builder Create an Acme system from our brand colors.
+/skill:andura-component-builder Add an accessible pricing card.
 ```
 
-To use it from a sibling consuming project with pi:
+To use a skill from a sibling consuming project with pi:
 
 ```sh
-pi --skill ../andura-ui/.agents/skills/app-builder/SKILL.md
+pi --skill ../andura-ui/.agents/skills/andura-ds-builder/SKILL.md
 ```
 
-The default workflow pauses for approval between stages. See [the skill instructions](.agents/skills/app-builder/SKILL.md) for gated and autopilot behavior.
+Repeat `--skill` to load more than one. The app-builder workflow pauses for
+approval between stages. Each skill keeps product-specific code in the
+consuming application by default.
 
 ## Repository structure
 
