@@ -7,6 +7,12 @@ import '../foundations/andura_tokens.dart';
 
 /// The standard light and dark themes for Andura products.
 abstract final class AnduraTheme {
+  /// Controls whether Google Fonts may fetch Poppins at runtime.
+  /// Disable this when the host application bundles the font assets.
+  static void configureFonts({required bool allowRuntimeFetching}) {
+    GoogleFonts.config.allowRuntimeFetching = allowRuntimeFetching;
+  }
+
   static ThemeData get light => create(Brightness.light);
   static ThemeData get dark => create(Brightness.dark);
 
