@@ -3,7 +3,7 @@
   "adapters": {
     "flutter": {"source": "lib", "implemented": "all"},
     "react": {"source": "packages/react/src/index.tsx", "implemented": "all"},
-    "compose": {"source": "packages/compose/andura/src/main/kotlin/com/andura/ui/AnduraComponents.kt", "implemented": ["AnduraButton", "AnduraCard", "AnduraTextField", "AnduraBadge", "AnduraDialog"]},
-    "swift": {"source": "packages/swift/AnduraComponents.swift", "implemented": ["AnduraButton", "AnduraCard", "AnduraBadge", "AnduraDialog"]}
+    "compose": {"source": "packages/compose/andura/src/main/kotlin/com/andura/ui/AnduraComponents.kt", "implemented": ["AnduraButton", "AnduraIconButton", "AnduraCard", "AnduraBadge", "AnduraDialog", "AnduraTextField", "AnduraTextArea", "AnduraSelect", "AnduraPasswordField", "AnduraChoiceRow", "AnduraCheckOption", "AnduraSettingsTile", "AnduraPage", "AnduraSearchField", "AnduraEmptyState", "AnduraLoadingOverlay", "AnduraErrorText", "AnduraUserAvatar", "AnduraNotificationButton"]},
+    "swift": {"source": "packages/swift/AnduraComponents.swift", "implemented": ["AnduraButton", "AnduraIconButton", "AnduraCard", "AnduraBadge", "AnduraDialog", "AnduraTextField", "AnduraTextArea", "AnduraSelect", "AnduraPasswordField", "AnduraChoiceRow", "AnduraCheckOption", "AnduraSettingsTile", "AnduraPage", "AnduraSearchField", "AnduraEmptyState", "AnduraLoadingOverlay", "AnduraErrorText", "AnduraUserAvatar", "AnduraNotificationButton"]}
   }
 }
