@@ -43,3 +43,4 @@ jobs:
       - run: python3 scripts/generate_tokens.py
       - run: git diff --exit-code
       - run: python3 scripts/validate_design_system.py
+      - run: python3 scripts/validate_platforms.py
