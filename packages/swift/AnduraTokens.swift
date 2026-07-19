@@ -1,22 +1,22 @@
 // GENERATED FILE - DO NOT EDIT.
-import Foundation
+import SwiftUI
 
 public enum AnduraTokens {
-    public static let colorPrimary = "#6B72FF"
-    public static let colorPrimaryDeep = "#5C62FD"
-    public static let colorYellow = "#FECC30"
-    public static let colorMint = "#6BD4AE"
-    public static let colorRed = "#FF374B"
-    public static let colorDonutYellow = "#FDF031"
-    public static let colorScaffold = "#FFFFFF"
-    public static let colorSearchFill = "#F8F8F8"
-    public static let colorEmphasizedSurface = "#D4D6F3"
-    public static let colorSubtleSurface = "#F6F4FC"
-    public static let colorPastelMint = "#F1F7EE"
-    public static let colorPastelLavender = "#F1EDFA"
-    public static let colorPastelBlue = "#DFEEF4"
-    public static let colorTextDark = "#16161E"
-    public static let colorTextGray = "#7B7B8B"
+    public static let colorPrimary = Color(red: 0.419608, green: 0.447059, blue: 1.000000)
+    public static let colorPrimaryDeep = Color(red: 0.360784, green: 0.384314, blue: 0.992157)
+    public static let colorYellow = Color(red: 0.996078, green: 0.800000, blue: 0.188235)
+    public static let colorMint = Color(red: 0.419608, green: 0.831373, blue: 0.682353)
+    public static let colorRed = Color(red: 1.000000, green: 0.215686, blue: 0.294118)
+    public static let colorDonutYellow = Color(red: 0.992157, green: 0.941176, blue: 0.192157)
+    public static let colorScaffold = Color(red: 1.000000, green: 1.000000, blue: 1.000000)
+    public static let colorSearchFill = Color(red: 0.972549, green: 0.972549, blue: 0.972549)
+    public static let colorEmphasizedSurface = Color(red: 0.831373, green: 0.839216, blue: 0.952941)
+    public static let colorSubtleSurface = Color(red: 0.964706, green: 0.956863, blue: 0.988235)
+    public static let colorPastelMint = Color(red: 0.945098, green: 0.968627, blue: 0.933333)
+    public static let colorPastelLavender = Color(red: 0.945098, green: 0.929412, blue: 0.980392)
+    public static let colorPastelBlue = Color(red: 0.874510, green: 0.933333, blue: 0.956863)
+    public static let colorTextDark = Color(red: 0.086275, green: 0.086275, blue: 0.117647)
+    public static let colorTextGray = Color(red: 0.482353, green: 0.482353, blue: 0.545098)
     public static let spacingXs = 4.0
     public static let spacingSm = 8.0
     public static let spacingMd = 12.0

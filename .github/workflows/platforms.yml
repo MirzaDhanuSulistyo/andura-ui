@@ -1,0 +1,30 @@
+name: Platform adapters
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  compose:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/compose
+    steps:
+      - uses: actions/checkout@v4
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.11'
+      - run: gradle build
+
+  swift:
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: packages/swift
+    steps:
+      - uses: actions/checkout@v4
+      - uses: swift-actions/setup-swift@v2
+        with:
+          swift-version: '5.9'
+      - run: swift build

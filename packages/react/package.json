@@ -16,6 +16,7 @@
     "./tokens": "./dist/tokens.js"
   },
   "files": ["dist"],
+  "publishConfig": {"access": "public"},
   "scripts": {
     "build": "tsup src/index.tsx tokens.ts --format esm,cjs --dts --external react --clean && cp src/styles.css tokens.css dist/",
     "test": "vitest run",

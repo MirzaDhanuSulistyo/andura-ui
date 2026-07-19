@@ -47,24 +47,38 @@ for group, values in source.items():
 ts += ["} as const;", ""]
 (ROOT / "packages/react/tokens.ts").write_text("\n".join(ts))
 
-kotlin = ["// GENERATED FILE - DO NOT EDIT.", "package com.andura.ui", "", "object AnduraTokens {"]
+kotlin = ["// GENERATED FILE - DO NOT EDIT.", "package com.andura.ui", "", "import androidx.compose.ui.graphics.Color", "import androidx.compose.ui.unit.dp", "import androidx.compose.ui.unit.sp", "", "object AnduraTokens {"]
 for group, values in source.items():
     for name, value in values.items():
-        if isinstance(value, str):
+        if isinstance(value, str) and value.startswith('#'):
+            value = f"Color(0xFF{value[1:]})"
+        elif isinstance(value, str):
             value = f'"{value}"'
+        elif group in ('spacing', 'radius', 'size', 'elevation', 'layout'):
+            value = f"{value}.dp"
+        elif group == 'typography' and name.endswith('Size'):
+            value = f"{value}.sp"
+        elif group == 'motion':
+            value = f"{value}L"
         else:
             value = f"{value}f"
-        kotlin.append(f"    const val {group}{name[0].upper() + name[1:]} = {value}")
+        kotlin.append(f"    val {group}{name[0].upper() + name[1:]} = {value}")
 kotlin += ["}", ""]
-(ROOT / "packages/compose/AnduraTokens.kt").write_text("\n".join(kotlin))
+compose_tokens = "\n".join(kotlin)
+(ROOT / "packages/compose/AnduraTokens.kt").write_text(compose_tokens)
+(ROOT / "packages/compose/andura/src/main/kotlin/com/andura/ui/AnduraTokens.kt").write_text(compose_tokens)
 
-swift = ["// GENERATED FILE - DO NOT EDIT.", "import Foundation", "", "public enum AnduraTokens {"]
+swift = ["// GENERATED FILE - DO NOT EDIT.", "import SwiftUI", "", "public enum AnduraTokens {"]
 for group, values in source.items():
     for name, value in values.items():
-        if isinstance(value, str):
-            value = f'"{value}"'
+        if isinstance(value, str) and value.startswith('#'):
+            rgb = [int(value[i:i + 2], 16) / 255 for i in (1, 3, 5)]
+            value = f"Color(red: {rgb[0]:.6f}, green: {rgb[1]:.6f}, blue: {rgb[2]:.6f})"
+        elif isinstance(value, str):
+            value = f'\"{value}\"'
         else:
             value = f"{value}.0"
         swift.append(f"    public static let {group}{name[0].upper() + name[1:]} = {value}")
 swift += ["}", ""]
-(ROOT / "packages/swift/AnduraTokens.swift").write_text("\n".join(swift))
+swift_tokens = "\n".join(swift)
+(ROOT / "packages/swift/AnduraTokens.swift").write_text(swift_tokens)
