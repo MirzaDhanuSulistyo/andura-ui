@@ -66,6 +66,9 @@ MaterialApp(
 
 Shared widgets read `AnduraThemeTokens.of(context)`, allowing colors,
 typography, radii, spacing, motion, and layout values to change by system.
+Generated catalogs use one clearly named source file per design system on every
+platform (for example, `airbnb.dart`, `airbnb.ts`,
+`AirbnbDesignSystem.kt`, and `AirbnbDesignSystem.swift`).
 `docs/open_design_audit.json` contains the complete system/component coverage
 matrix. To refresh it from a local Open Design checkout:
 

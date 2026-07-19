@@ -202,35 +202,42 @@ def dart_system_lines(item: dict, indent: str = "  ") -> list[str]:
     ]
 
 
-chunk_size = 20
-chunks = [systems[index:index + chunk_size] for index in range(0, len(systems), chunk_size)]
-chunk_dir = OUT_DART.parent / "generated"
-chunk_dir.mkdir(parents=True, exist_ok=True)
-for stale in chunk_dir.glob("design_systems_*.dart"):
+def system_identifier(value: str) -> str:
+    return "".join(part[:1].upper() + part[1:] for part in re.split(r"[^A-Za-z0-9]+", value) if part)
+
+
+def dart_file_name(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "_", value.lower()).strip("_")
+
+
+generated_dir = OUT_DART.parent / "generated"
+generated_dir.mkdir(parents=True, exist_ok=True)
+for stale in generated_dir.glob("*.dart"):
     stale.unlink()
 
-for index, chunk in enumerate(chunks, start=1):
-    name = f"anduraDesignSystemsChunk{index:02d}"
-    chunk_lines = [
+for item in systems:
+    name = f"anduraDesignSystem{system_identifier(item['id'])}"
+    declaration = dart_system_lines(item, "")
+    declaration[0] = f"const {name} = AnduraDesignSystem("
+    declaration[-1] = ");"
+    system_lines = [
         "// GENERATED FILE - DO NOT EDIT.",
         "import '../andura_design_system.dart';",
         "",
-        f"const {name} = <AnduraDesignSystem>[",
+        *declaration,
+        "",
     ]
-    for item in chunk:
-        chunk_lines.extend(dart_system_lines(item))
-    chunk_lines.extend(["];", ""])
-    (chunk_dir / f"design_systems_{index:02d}.dart").write_text("\n".join(chunk_lines))
+    (generated_dir / f"{dart_file_name(item['id'])}.dart").write_text("\n".join(system_lines))
 
 lines = [
     "// GENERATED FILE - DO NOT EDIT.",
     "// Source: Open Design design-systems catalog.",
     "import 'andura_design_system.dart';",
-    *[f"import 'generated/design_systems_{index:02d}.dart';" for index in range(1, len(chunks) + 1)],
+    *[f"import 'generated/{dart_file_name(item['id'])}.dart';" for item in systems],
     "",
     "abstract final class AnduraDesignSystems {",
     "  static const all = <AnduraDesignSystem>[",
-    *[f"    ...anduraDesignSystemsChunk{index:02d}," for index in range(1, len(chunks) + 1)],
+    *[f"    anduraDesignSystem{system_identifier(item['id'])}," for item in systems],
     "  ];",
     "",
     "  static AnduraDesignSystem byId(String id) => all.firstWhere(",
@@ -250,7 +257,7 @@ OUT_DART.write_text("\n".join(lines))
 dart = shutil.which("dart")
 if dart:
     subprocess.run(
-        [dart, "format", str(OUT_DART), str(chunk_dir)],
+        [dart, "format", str(OUT_DART), str(generated_dir)],
         check=True,
         stdout=subprocess.DEVNULL,
     )

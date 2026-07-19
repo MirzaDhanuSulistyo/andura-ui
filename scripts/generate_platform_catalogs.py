@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
-"""Generate React, Compose, and Swift catalogs from design_systems/catalog.json."""
+"""Generate one React, Compose, and Swift source file per design system."""
 from __future__ import annotations
 
 import json
+import re
 import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "design_systems/catalog.json"
-CHUNK_SIZE = 20
 systems = json.loads(CATALOG.read_text())["systems"]
-chunks = [systems[i:i + CHUNK_SIZE] for i in range(0, len(systems), CHUNK_SIZE)]
 
 
 def quoted(value: str) -> str:
@@ -23,15 +22,28 @@ def css_color(argb: int) -> str:
     return f"#{rgb:06x}" if alpha == 255 else f"#{rgb:06x}{alpha:02x}"
 
 
-def clean_dir(path: Path, pattern: str) -> None:
-    path.mkdir(parents=True, exist_ok=True)
-    for stale in path.glob(pattern):
-        stale.unlink()
+def pascal_id(value: str) -> str:
+    return "".join(
+        part[:1].upper() + part[1:]
+        for part in re.split(r"[^A-Za-z0-9]+", value)
+        if part
+    )
+
+
+def variable_id(value: str) -> str:
+    name = pascal_id(value)
+    return name[:1].lower() + name[1:]
+
+
+def reset_dir(path: Path) -> None:
+    if path.exists():
+        shutil.rmtree(path)
+    path.mkdir(parents=True)
 
 
 # React / TypeScript ---------------------------------------------------------
 ts_dir = ROOT / "packages/react/src/design-systems"
-clean_dir(ts_dir, "chunk-*.ts")
+reset_dir(ts_dir)
 ts_fields = [
     ("id", "string"), ("name", "string"), ("category", "string"),
     ("description", "string"), ("brightness", "'light' | 'dark'"),
@@ -54,28 +66,58 @@ ts_fields = [
     "}", "",
 ]))
 
-for index, chunk in enumerate(chunks, 1):
-    lines = ["// GENERATED FILE - DO NOT EDIT.", "import type { AnduraDesignSystem } from './types';", "", f"export const designSystemsChunk{index:02d} = ["]
-    for s in chunk:
-        lines.extend([
-            "  {",
-            f"    id: {quoted(s['id'])}, name: {quoted(s['name'])}, category: {quoted(s['category'])},",
-            f"    description: {quoted(s['description'])}, brightness: {quoted(s['brightness'])},",
-            f"    background: {quoted(css_color(s['bg']))}, surface: {quoted(css_color(s['surface']))}, surfaceWarm: {quoted(css_color(s['surfaceWarm']))},",
-            f"    foreground: {quoted(css_color(s['fg']))}, foregroundSecondary: {quoted(css_color(s['fg2']))}, muted: {quoted(css_color(s['muted']))}, border: {quoted(css_color(s['border']))},",
-            f"    accent: {quoted(css_color(s['accent']))}, accentOn: {quoted(css_color(s['accentOn']))}, success: {quoted(css_color(s['success']))}, warning: {quoted(css_color(s['warning']))}, danger: {quoted(css_color(s['danger']))},",
-            f"    fontDisplay: {quoted(s['fontDisplay'])}, fontBody: {quoted(s['fontBody'])}, textBase: {s['textBase']},",
-            f"    radiusSm: {s['radiusSm']}, radiusMd: {s['radiusMd']}, radiusLg: {s['radiusLg']}, radiusPill: {s['radiusPill']},",
-            f"    space1: {s['space1']}, space2: {s['space2']}, space3: {s['space3']}, space4: {s['space4']}, space6: {s['space6']}, space8: {s['space8']},",
-            f"    motionFastMs: {s['motionFast']}, motionBaseMs: {s['motionBase']}, containerMax: {s['containerMax']},",
-            f"    componentGroups: {json.dumps(s['groups'])}, sourceClassCount: {s['sourceClassCount']},",
-            "  },",
-        ])
-    lines.extend(["] as const satisfies readonly AnduraDesignSystem[];", ""])
-    (ts_dir / f"chunk-{index:02d}.ts").write_text("\n".join(lines))
+for system in systems:
+    name = f"{variable_id(system['id'])}DesignSystem"
+    lines = [
+        "// GENERATED FILE - DO NOT EDIT.",
+        "import type { AnduraDesignSystem } from './types';",
+        "",
+        f"export const {name} = {{",
+        f"  id: {quoted(system['id'])},",
+        f"  name: {quoted(system['name'])},",
+        f"  category: {quoted(system['category'])},",
+        f"  description: {quoted(system['description'])},",
+        f"  brightness: {quoted(system['brightness'])},",
+        f"  background: {quoted(css_color(system['bg']))},",
+        f"  surface: {quoted(css_color(system['surface']))},",
+        f"  surfaceWarm: {quoted(css_color(system['surfaceWarm']))},",
+        f"  foreground: {quoted(css_color(system['fg']))},",
+        f"  foregroundSecondary: {quoted(css_color(system['fg2']))},",
+        f"  muted: {quoted(css_color(system['muted']))},",
+        f"  border: {quoted(css_color(system['border']))},",
+        f"  accent: {quoted(css_color(system['accent']))},",
+        f"  accentOn: {quoted(css_color(system['accentOn']))},",
+        f"  success: {quoted(css_color(system['success']))},",
+        f"  warning: {quoted(css_color(system['warning']))},",
+        f"  danger: {quoted(css_color(system['danger']))},",
+        f"  fontDisplay: {quoted(system['fontDisplay'])},",
+        f"  fontBody: {quoted(system['fontBody'])},",
+        f"  textBase: {system['textBase']},",
+        f"  radiusSm: {system['radiusSm']},",
+        f"  radiusMd: {system['radiusMd']},",
+        f"  radiusLg: {system['radiusLg']},",
+        f"  radiusPill: {system['radiusPill']},",
+        f"  space1: {system['space1']},",
+        f"  space2: {system['space2']},",
+        f"  space3: {system['space3']},",
+        f"  space4: {system['space4']},",
+        f"  space6: {system['space6']},",
+        f"  space8: {system['space8']},",
+        f"  motionFastMs: {system['motionFast']},",
+        f"  motionBaseMs: {system['motionBase']},",
+        f"  containerMax: {system['containerMax']},",
+        f"  componentGroups: {json.dumps(system['groups'])},",
+        f"  sourceClassCount: {system['sourceClassCount']},",
+        "} as const satisfies AnduraDesignSystem;",
+        "",
+    ]
+    (ts_dir / f"{system['id']}.ts").write_text("\n".join(lines))
 
-imports = [f"import {{ designSystemsChunk{i:02d} }} from './chunk-{i:02d}';" for i in range(1, len(chunks) + 1)]
-spreads = [f"  ...designSystemsChunk{i:02d}," for i in range(1, len(chunks) + 1)]
+imports = [
+    f"import {{ {variable_id(system['id'])}DesignSystem }} from './{system['id']}';"
+    for system in systems
+]
+entries = [f"  {variable_id(system['id'])}DesignSystem," for system in systems]
 (ts_dir / "index.ts").write_text("\n".join([
     "// GENERATED FILE - DO NOT EDIT.",
     "import type { AnduraDesignSystem } from './types';",
@@ -83,7 +125,7 @@ spreads = [f"  ...designSystemsChunk{i:02d}," for i in range(1, len(chunks) + 1)
     "export type { AnduraDesignSystem } from './types';",
     "",
     "export const designSystems = [",
-    *spreads,
+    *entries,
     "] as const satisfies readonly AnduraDesignSystem[];",
     "",
     "export function getDesignSystem(id: string): AnduraDesignSystem {",
@@ -106,8 +148,8 @@ spreads = [f"  ...designSystemsChunk{i:02d}," for i in range(1, len(chunks) + 1)
 
 # Kotlin / Compose -----------------------------------------------------------
 kt_dir = ROOT / "packages/compose/andura/src/main/kotlin/com/andura/ui/designsystems"
-clean_dir(kt_dir, "AnduraDesignSystems*.kt")
-model = """// GENERATED FILE - DO NOT EDIT.
+reset_dir(kt_dir)
+(kt_dir / "AnduraDesignSystem.kt").write_text("""// GENERATED FILE - DO NOT EDIT.
 package com.andura.ui.designsystems
 
 data class AnduraDesignSystem(
@@ -122,36 +164,72 @@ data class AnduraDesignSystem(
     val motionFastMs: Int, val motionBaseMs: Int, val containerMax: Float,
     val componentGroups: List<String>, val sourceClassCount: Int,
 )
-"""
-(kt_dir / "AnduraDesignSystem.kt").write_text(model)
+""")
+
 
 def ku(value: int) -> str:
     return f"0x{value:08X}u"
 
+
 def kstr(value: str) -> str:
     return quoted(value).replace("\\/", "/").replace("$", "\\$")
 
-for index, chunk in enumerate(chunks, 1):
-    lines = ["// GENERATED FILE - DO NOT EDIT.", "package com.andura.ui.designsystems", "", f"internal val anduraDesignSystemsChunk{index:02d} = listOf("]
-    for s in chunk:
-        lines.extend([
-            "    AnduraDesignSystem(",
-            f"        id = {kstr(s['id'])}, name = {kstr(s['name'])}, category = {kstr(s['category'])}, description = {kstr(s['description'])}, nativeDark = {str(s['brightness'] == 'dark').lower()},",
-            f"        background = {ku(s['bg'])}, surface = {ku(s['surface'])}, surfaceWarm = {ku(s['surfaceWarm'])}, foreground = {ku(s['fg'])}, foregroundSecondary = {ku(s['fg2'])}, muted = {ku(s['muted'])}, border = {ku(s['border'])},",
-            f"        accent = {ku(s['accent'])}, accentOn = {ku(s['accentOn'])}, success = {ku(s['success'])}, warning = {ku(s['warning'])}, danger = {ku(s['danger'])},",
-            f"        fontDisplay = {kstr(s['fontDisplay'])}, fontBody = {kstr(s['fontBody'])}, textBase = {s['textBase']}f, radiusSm = {s['radiusSm']}f, radiusMd = {s['radiusMd']}f, radiusLg = {s['radiusLg']}f, radiusPill = {s['radiusPill']}f,",
-            f"        space1 = {s['space1']}f, space2 = {s['space2']}f, space3 = {s['space3']}f, space4 = {s['space4']}f, space6 = {s['space6']}f, space8 = {s['space8']}f,",
-            f"        motionFastMs = {s['motionFast']}, motionBaseMs = {s['motionBase']}, containerMax = {s['containerMax']}f, componentGroups = listOf({', '.join(kstr(x) for x in s['groups'])}), sourceClassCount = {s['sourceClassCount']},",
-            "    ),",
-        ])
-    lines.extend([")", ""])
-    (kt_dir / f"AnduraDesignSystems{index:02d}.kt").write_text("\n".join(lines))
+
+for system in systems:
+    name = f"{variable_id(system['id'])}DesignSystem"
+    lines = [
+        "// GENERATED FILE - DO NOT EDIT.",
+        "package com.andura.ui.designsystems",
+        "",
+        f"internal val {name} = AnduraDesignSystem(",
+        f"    id = {kstr(system['id'])},",
+        f"    name = {kstr(system['name'])},",
+        f"    category = {kstr(system['category'])},",
+        f"    description = {kstr(system['description'])},",
+        f"    nativeDark = {str(system['brightness'] == 'dark').lower()},",
+        f"    background = {ku(system['bg'])},",
+        f"    surface = {ku(system['surface'])},",
+        f"    surfaceWarm = {ku(system['surfaceWarm'])},",
+        f"    foreground = {ku(system['fg'])},",
+        f"    foregroundSecondary = {ku(system['fg2'])},",
+        f"    muted = {ku(system['muted'])},",
+        f"    border = {ku(system['border'])},",
+        f"    accent = {ku(system['accent'])},",
+        f"    accentOn = {ku(system['accentOn'])},",
+        f"    success = {ku(system['success'])},",
+        f"    warning = {ku(system['warning'])},",
+        f"    danger = {ku(system['danger'])},",
+        f"    fontDisplay = {kstr(system['fontDisplay'])},",
+        f"    fontBody = {kstr(system['fontBody'])},",
+        f"    textBase = {system['textBase']}f,",
+        f"    radiusSm = {system['radiusSm']}f,",
+        f"    radiusMd = {system['radiusMd']}f,",
+        f"    radiusLg = {system['radiusLg']}f,",
+        f"    radiusPill = {system['radiusPill']}f,",
+        f"    space1 = {system['space1']}f,",
+        f"    space2 = {system['space2']}f,",
+        f"    space3 = {system['space3']}f,",
+        f"    space4 = {system['space4']}f,",
+        f"    space6 = {system['space6']}f,",
+        f"    space8 = {system['space8']}f,",
+        f"    motionFastMs = {system['motionFast']},",
+        f"    motionBaseMs = {system['motionBase']},",
+        f"    containerMax = {system['containerMax']}f,",
+        f"    componentGroups = listOf({', '.join(kstr(x) for x in system['groups'])}),",
+        f"    sourceClassCount = {system['sourceClassCount']},",
+        ")",
+        "",
+    ]
+    (kt_dir / f"{pascal_id(system['id'])}DesignSystem.kt").write_text("\n".join(lines))
+
 (kt_dir / "AnduraDesignSystems.kt").write_text("\n".join([
-    "// GENERATED FILE - DO NOT EDIT.", "package com.andura.ui.designsystems", "",
+    "// GENERATED FILE - DO NOT EDIT.",
+    "package com.andura.ui.designsystems",
+    "",
     "object AnduraDesignSystems {",
-    "    val all: List<AnduraDesignSystem> = buildList {",
-    *[f"        addAll(anduraDesignSystemsChunk{i:02d})" for i in range(1, len(chunks) + 1)],
-    "    }",
+    "    val all: List<AnduraDesignSystem> = listOf(",
+    *[f"        {variable_id(system['id'])}DesignSystem," for system in systems],
+    "    )",
     "    fun byId(id: String): AnduraDesignSystem = all.firstOrNull { it.id == id } ?: defaultSystem",
     "    val defaultSystem: AnduraDesignSystem get() = all.firstOrNull { it.id == \"default\" } ?: all.first()",
     "}", "",
@@ -159,7 +237,7 @@ for index, chunk in enumerate(chunks, 1):
 
 # Swift ----------------------------------------------------------------------
 swift_dir = ROOT / "packages/swift/Generated"
-clean_dir(swift_dir, "AnduraDesignSystems*.swift")
+reset_dir(swift_dir)
 (swift_dir / "AnduraDesignSystem.swift").write_text("""// GENERATED FILE - DO NOT EDIT.
 import SwiftUI
 
@@ -183,32 +261,72 @@ public extension Color {
 }
 """)
 
+
 def sw(value: str) -> str:
     return quoted(value).replace("\\/", "/")
 
-for index, chunk in enumerate(chunks, 1):
-    lines = ["// GENERATED FILE - DO NOT EDIT.", "import Foundation", "", f"let anduraDesignSystemsChunk{index:02d}: [AnduraDesignSystem] = ["]
-    for s in chunk:
-        lines.extend([
-            "    AnduraDesignSystem(",
-            f"        id: {sw(s['id'])}, name: {sw(s['name'])}, category: {sw(s['category'])}, description: {sw(s['description'])}, nativeDark: {str(s['brightness'] == 'dark').lower()},",
-            f"        background: 0x{s['bg']:08X}, surface: 0x{s['surface']:08X}, surfaceWarm: 0x{s['surfaceWarm']:08X}, foreground: 0x{s['fg']:08X}, foregroundSecondary: 0x{s['fg2']:08X}, muted: 0x{s['muted']:08X}, border: 0x{s['border']:08X},",
-            f"        accent: 0x{s['accent']:08X}, accentOn: 0x{s['accentOn']:08X}, success: 0x{s['success']:08X}, warning: 0x{s['warning']:08X}, danger: 0x{s['danger']:08X},",
-            f"        fontDisplay: {sw(s['fontDisplay'])}, fontBody: {sw(s['fontBody'])}, textBase: {s['textBase']}, radiusSm: {s['radiusSm']}, radiusMd: {s['radiusMd']}, radiusLg: {s['radiusLg']}, radiusPill: {s['radiusPill']},",
-            f"        space1: {s['space1']}, space2: {s['space2']}, space3: {s['space3']}, space4: {s['space4']}, space6: {s['space6']}, space8: {s['space8']}, motionFastMs: {s['motionFast']}, motionBaseMs: {s['motionBase']}, containerMax: {s['containerMax']},",
-            f"        componentGroups: [{', '.join(sw(x) for x in s['groups'])}], sourceClassCount: {s['sourceClassCount']}),",
-        ])
-    lines.extend(["]", ""])
-    (swift_dir / f"AnduraDesignSystems{index:02d}.swift").write_text("\n".join(lines))
+
+for system in systems:
+    name = f"{variable_id(system['id'])}DesignSystem"
+    lines = [
+        "// GENERATED FILE - DO NOT EDIT.",
+        "import Foundation",
+        "",
+        f"let {name} = AnduraDesignSystem(",
+        f"    id: {sw(system['id'])},",
+        f"    name: {sw(system['name'])},",
+        f"    category: {sw(system['category'])},",
+        f"    description: {sw(system['description'])},",
+        f"    nativeDark: {str(system['brightness'] == 'dark').lower()},",
+        f"    background: 0x{system['bg']:08X},",
+        f"    surface: 0x{system['surface']:08X},",
+        f"    surfaceWarm: 0x{system['surfaceWarm']:08X},",
+        f"    foreground: 0x{system['fg']:08X},",
+        f"    foregroundSecondary: 0x{system['fg2']:08X},",
+        f"    muted: 0x{system['muted']:08X},",
+        f"    border: 0x{system['border']:08X},",
+        f"    accent: 0x{system['accent']:08X},",
+        f"    accentOn: 0x{system['accentOn']:08X},",
+        f"    success: 0x{system['success']:08X},",
+        f"    warning: 0x{system['warning']:08X},",
+        f"    danger: 0x{system['danger']:08X},",
+        f"    fontDisplay: {sw(system['fontDisplay'])},",
+        f"    fontBody: {sw(system['fontBody'])},",
+        f"    textBase: {system['textBase']},",
+        f"    radiusSm: {system['radiusSm']},",
+        f"    radiusMd: {system['radiusMd']},",
+        f"    radiusLg: {system['radiusLg']},",
+        f"    radiusPill: {system['radiusPill']},",
+        f"    space1: {system['space1']},",
+        f"    space2: {system['space2']},",
+        f"    space3: {system['space3']},",
+        f"    space4: {system['space4']},",
+        f"    space6: {system['space6']},",
+        f"    space8: {system['space8']},",
+        f"    motionFastMs: {system['motionFast']},",
+        f"    motionBaseMs: {system['motionBase']},",
+        f"    containerMax: {system['containerMax']},",
+        f"    componentGroups: [{', '.join(sw(x) for x in system['groups'])}],",
+        f"    sourceClassCount: {system['sourceClassCount']}",
+        ")",
+        "",
+    ]
+    (swift_dir / f"{pascal_id(system['id'])}DesignSystem.swift").write_text("\n".join(lines))
+
 (swift_dir / "AnduraDesignSystems.swift").write_text("\n".join([
-    "// GENERATED FILE - DO NOT EDIT.", "import Foundation", "",
+    "// GENERATED FILE - DO NOT EDIT.",
+    "import Foundation",
+    "",
     "public enum AnduraDesignSystems {",
     "    public static let all: [AnduraDesignSystem] = [",
-    *[f"        anduraDesignSystemsChunk{i:02d}," for i in range(1, len(chunks) + 1)],
-    "    ].flatMap { $0 }",
+    *[f"        {variable_id(system['id'])}DesignSystem," for system in systems],
+    "    ]",
     "    public static func byID(_ id: String) -> AnduraDesignSystem { all.first { $0.id == id } ?? defaultSystem }",
     "    public static var defaultSystem: AnduraDesignSystem { all.first { $0.id == \"default\" } ?? all[0] }",
     "}", "",
 ]))
 
-print(f"Generated {len(systems)} design systems for React, Compose, and Swift in {len(chunks)} chunks each.")
+print(
+    f"Generated {len(systems)} design systems for React, Compose, and Swift "
+    "with one source file per system."
+)

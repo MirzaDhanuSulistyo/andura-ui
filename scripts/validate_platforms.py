@@ -25,6 +25,25 @@ react_names = {
 }
 
 
+def pascal_id(value):
+    return "".join(
+        part[:1].upper() + part[1:]
+        for part in re.split(r"[^A-Za-z0-9]+", value)
+        if part
+    )
+
+
+def system_file(platform, system_id):
+    if platform == "flutter":
+        filename = re.sub(r"[^a-z0-9]+", "_", system_id.lower()).strip("_")
+        return root / "lib/src/theme/generated" / f"{filename}.dart"
+    if platform == "react":
+        return root / "packages/react/src/design-systems" / f"{system_id}.ts"
+    if platform == "compose":
+        return root / "packages/compose/andura/src/main/kotlin/com/andura/ui/designsystems" / f"{pascal_id(system_id)}DesignSystem.kt"
+    return root / "packages/swift/Generated" / f"{pascal_id(system_id)}DesignSystem.swift"
+
+
 def platform_name(platform, component):
     if platform == "react":
         return react_names.get(component, component.removeprefix("Andura"))
@@ -68,7 +87,19 @@ for platform, adapter in manifest["adapters"].items():
         errors.append(
             f"{platform}: catalog missing {len(missing_ids)} IDs ({', '.join(missing_ids[:5])})"
         )
-    print(f"{platform}: {len(expected)} components, {len(system_ids)} design systems")
+    missing_files = [
+        system_id for system_id in system_ids
+        if not system_file(platform, system_id).is_file()
+    ]
+    if missing_files:
+        errors.append(
+            f"{platform}: missing {len(missing_files)} per-system files "
+            f"({', '.join(missing_files[:5])})"
+        )
+    print(
+        f"{platform}: {len(expected)} components, {len(system_ids)} design systems, "
+        f"{len(system_ids) - len(missing_files)} per-system files"
+    )
 
 if errors:
     print("\n".join(f"ERROR: {error}" for error in errors), file=sys.stderr)
