@@ -1,0 +1,32 @@
+@import url('../tokens.css');
+
+:root { font-family: var(--andura-typography-fontFamily), system-ui, sans-serif; color: var(--andura-color-textDark); }
+.andura-btn, .andura-icon-btn, .andura-control { font: inherit; }
+.andura-btn { min-height: 56px; border: 0; border-radius: 999px; padding: 0 24px; cursor: pointer; transition: opacity 150ms ease, transform 150ms ease; }
+.andura-btn:hover:not(:disabled) { transform: translateY(-1px); }
+.andura-btn:disabled { opacity: .5; cursor: not-allowed; }
+.andura-btn-primary { color: white; background: var(--andura-color-primary); }
+.andura-btn-secondary { color: var(--andura-color-textDark); background: var(--andura-color-mint); }
+.andura-btn-danger { color: white; background: var(--andura-color-red); }
+.andura-btn-ghost { color: var(--andura-color-textDark); background: transparent; border: 1px solid var(--andura-color-textGray); }
+.andura-icon-btn { min-width: 44px; min-height: 44px; border: 0; border-radius: 14px; background: transparent; cursor: pointer; font-size: 1.25rem; }
+.andura-icon-btn:hover { background: var(--andura-color-subtleSurface); }
+.andura-card { padding: 16px; border-radius: 16px; background: white; border: 1px solid #edf1f6; }
+.andura-card-interactive { cursor: pointer; }
+.andura-field { display: grid; gap: 8px; margin-block: 12px; font-weight: 600; }
+.andura-control { box-sizing: border-box; width: 100%; min-height: 44px; padding: 10px 12px; color: inherit; background: white; border: 1px solid #d8dee8; border-radius: 10px; }
+.andura-control:focus-visible, .andura-btn:focus-visible, .andura-icon-btn:focus-visible { outline: 3px solid color-mix(in srgb, var(--andura-color-primary) 30%, transparent); outline-offset: 2px; }
+.andura-textarea { min-height: 120px; resize: vertical; }
+.andura-helper, .andura-error { font-size: 12px; font-weight: 400; }
+.andura-error { color: var(--andura-color-red); }
+.andura-dialog { width: min(480px, calc(100% - 32px)); padding: 24px; border: 0; border-radius: 24px; box-shadow: 0 16px 40px #171f331a; }
+.andura-dialog::backdrop { background: #16161e66; }
+.andura-dialog-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.andura-dialog-header h2 { margin: 0; font-size: 20px; }
+.andura-badge { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+.andura-badge-neutral { background: #f1edfa; }
+.andura-badge-success { background: #dff5e9; color: #146c3a; }
+.andura-badge-warning { background: #fff1bd; color: #725500; }
+.andura-badge-danger { background: #ffe1e4; color: #a71928; }
+.andura-spinner { display: inline-block; width: 20px; height: 20px; border: 2px solid #ffffff80; border-top-color: white; border-radius: 50%; animation: andura-spin 700ms linear infinite; }
+@keyframes andura-spin { to { transform: rotate(360deg); } }

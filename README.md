@@ -56,4 +56,19 @@ flutter run
 
 Components expose disabled, loading, error, helper, and focus-friendly states where applicable. Shared token categories include semantic colors, spacing, radii, sizing, typography, motion, elevation, and responsive layout values.
 
-Product-specific business widgets should remain in the consuming application. Contributions and issues are welcome in the [public repository](https://github.com/MirzaDhanuSulistyo/andura-ui).
+Product-specific business widgets should remain in the consuming application.
+
+## Platform adapters
+
+The React adapter is available in `packages/react` with native React components,
+CSS tokens, Vitest/Testing Library coverage, and an interactive showcase. Run
+its checks with:
+
+```sh
+cd packages/react
+npm install
+npm run typecheck
+npm test
+```
+
+Contributions and issues are welcome in the [public repository](https://github.com/MirzaDhanuSulistyo/andura-ui).
