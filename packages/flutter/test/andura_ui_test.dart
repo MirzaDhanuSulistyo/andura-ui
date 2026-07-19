@@ -17,6 +17,17 @@ void main() {
     expect(theme.colorScheme.primary, tokens.accent);
   });
 
+  testWidgets('components support ordinary Material themes', (tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: Scaffold(body: AnduraCard(child: Text('Material host'))),
+      ),
+    );
+
+    expect(find.text('Material host'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
   testWidgets('AnduraButton exposes its label and action', (tester) async {
     var pressed = false;
     await tester.pumpWidget(

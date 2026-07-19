@@ -147,9 +147,42 @@ class AnduraThemeTokens extends ThemeExtension<AnduraThemeTokens> {
       );
 
   static AnduraThemeTokens of(BuildContext context) {
-    final tokens = Theme.of(context).extension<AnduraThemeTokens>();
-    assert(tokens != null, 'AnduraThemeTokens requires an AnduraTheme.');
-    return tokens!;
+    final theme = Theme.of(context);
+    final tokens = theme.extension<AnduraThemeTokens>();
+    if (tokens != null) return tokens;
+
+    // Keep components usable inside ordinary MaterialApp themes. This fallback
+    // preserves compatibility for widget tests and hosts that adopt Andura
+    // components before adopting an AnduraTheme.
+    final scheme = theme.colorScheme;
+    return AnduraThemeTokens(
+      systemId: 'material-fallback',
+      background: scheme.surface,
+      surface: scheme.surfaceContainerLow,
+      surfaceWarm: scheme.surfaceContainerHighest,
+      foreground: scheme.onSurface,
+      foregroundSecondary: scheme.onSurfaceVariant,
+      muted: scheme.onSurfaceVariant,
+      border: scheme.outlineVariant,
+      accent: scheme.primary,
+      accentOn: scheme.onPrimary,
+      success: const Color(0xFF6BD4AE),
+      warning: const Color(0xFFFECC30),
+      danger: scheme.error,
+      radiusSm: 10,
+      radiusMd: 14,
+      radiusLg: 16,
+      radiusPill: 999,
+      space1: 4,
+      space2: 8,
+      space3: 12,
+      space4: 16,
+      space6: 24,
+      space8: 32,
+      motionFast: const Duration(milliseconds: 150),
+      motionBase: const Duration(milliseconds: 250),
+      containerMax: 1200,
+    );
   }
 
   final String systemId;
