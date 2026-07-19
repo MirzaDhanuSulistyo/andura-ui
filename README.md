@@ -103,6 +103,24 @@ kept as recipes rather than treated as stable component APIs. Imported systems
 are aesthetic inspirations and are not official brand packages; source
 attribution remains in the upstream Open Design manifests.
 
+## AI app builder skill
+
+Andura includes a project-level Agent Skill that turns an app idea into a product brief, feasibility assessment, PRD, screen inventory, Andura UI proof, architecture, and phase-by-phase vertical slices.
+
+Inside this repository, restart the agent so it discovers the skill, then run:
+
+```text
+/skill:app-builder Build a Flutter app for <idea>. The core feature is <feature>.
+```
+
+To use it from a sibling consuming project with pi:
+
+```sh
+pi --skill ../andura-ui/.agents/skills/app-builder/SKILL.md
+```
+
+The default workflow pauses for approval between stages. See [the skill instructions](.agents/skills/app-builder/SKILL.md) for gated and autopilot behavior.
+
 ## Repository structure
 
 - `design_systems/catalog.json`: platform-neutral source catalog
