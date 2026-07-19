@@ -6,8 +6,8 @@
   },
   "adapters": {
     "flutter": {
-      "source": "lib",
-      "catalogSource": "lib/src/theme/generated_design_systems.dart",
+      "source": "packages/flutter/lib",
+      "catalogSource": "packages/flutter/lib/src/theme/generated_design_systems.dart",
       "implemented": "all"
     },
     "react": {

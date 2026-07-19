@@ -21,7 +21,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE = Path.home() / "code/open-design/design-systems"
 SOURCE = Path(sys.argv[1]).expanduser().resolve() if len(sys.argv) > 1 else DEFAULT_SOURCE
-OUT_DART = ROOT / "lib/src/theme/generated_design_systems.dart"
+OUT_DART = ROOT / "packages/flutter/lib/src/theme/generated_design_systems.dart"
 OUT_CATALOG = ROOT / "design_systems/catalog.json"
 OUT_JSON = ROOT / "docs/open_design_audit.json"
 OUT_MD = ROOT / "docs/open_design_audit.md"

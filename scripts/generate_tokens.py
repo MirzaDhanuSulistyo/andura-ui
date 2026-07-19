@@ -24,7 +24,7 @@ for group, values in source.items():
         generated = str(value) if group == "motion" else dart_value(value)
         lines.append(f"  static const {group}{name[0].upper() + name[1:]} = {generated};")
 lines += ["}", ""]
-(ROOT / "lib/src/foundations/generated_tokens.dart").write_text("\n".join(lines))
+(ROOT / "packages/flutter/lib/src/foundations/generated_tokens.dart").write_text("\n".join(lines))
 
 css = [":root {"]
 for group, values in source.items():

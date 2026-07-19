@@ -1,3 +1,10 @@
+## 0.3.0
+
+- Convert the repository to a symmetric multi-platform monorepo.
+- Move Flutter into `packages/flutter` and add a root Swift Package entry point.
+- Keep one generated source file per design system on every platform.
+- Add installable package and release entry points for all four adapters.
+
 ## 0.2.0
 
 - Add 151 normalized Open Design theme presets and runtime theme selection.

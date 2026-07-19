@@ -3,6 +3,7 @@
 All adapters consume the same platform-neutral catalog in
 `design_systems/catalog.json` and cover the complete 38-component contract.
 
+- `flutter/` — Dart package, Material themes, tests, showcase, and 151 themes
 - `react/` — React components, contextual CSS variables, tests, and 151 themes
 - `compose/andura/` — Jetpack Compose components, Material theme adapter, and 151 themes
 - `swift/` — SwiftUI components, environment theme modifier, and 151 themes

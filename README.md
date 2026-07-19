@@ -1,23 +1,44 @@
 # Andura UI
 
-A reusable Flutter design system for Andura applications. It provides a consistent Poppins-based theme, design tokens, responsive page layouts, accessible form controls, cards, buttons, dialogs, badges, feedback states, and navigation elements.
+A cross-platform design-system monorepo for Flutter, React, Jetpack Compose, and SwiftUI. Every adapter exposes the same 151 visual systems and 38-component contract from one shared catalog.
 
-## Install
+## Install Flutter
 
 ```yaml
 dependencies:
   andura_ui:
     git:
       url: https://github.com/MirzaDhanuSulistyo/andura-ui.git
-      ref: main
+      ref: v0.3.0
+      path: packages/flutter
 ```
 
 For local development, use a path dependency:
 
 ```yaml
 andura_ui:
-  path: ../andura-ui
+  path: ../andura-ui/packages/flutter
 ```
+
+## Install other adapters
+
+```sh
+npm install @andura-ui/react@0.3.0
+```
+
+```kotlin
+implementation("com.andura.ui:andura:0.3.0")
+```
+
+```swift
+.package(
+    url: "https://github.com/MirzaDhanuSulistyo/andura-ui.git",
+    from: "0.3.0"
+)
+```
+
+The Compose artifact is published through GitHub Packages. Swift Package
+Manager uses the repository-level `Package.swift`.
 
 ## Usage
 
@@ -43,7 +64,7 @@ MaterialApp(
 Run the interactive component showcase with:
 
 ```sh
-cd example
+cd packages/flutter/example
 flutter run
 ```
 
@@ -82,12 +103,15 @@ kept as recipes rather than treated as stable component APIs. Imported systems
 are aesthetic inspirations and are not official brand packages; source
 attribution remains in the upstream Open Design manifests.
 
-## Package structure
+## Repository structure
 
-- `foundations`: colors, spacing, radii, sizing, typography, motion, elevation, and layout tokens
-- `theme`: coordinated light and dark Material 3 themes
-- `components`: buttons, cards, fields, text areas, selects, dialogs, badges, selectors, states, and page layouts
-- `component_manifest.json`: machine-readable component, variant, state, and accessibility inventory
+- `design_systems/catalog.json`: platform-neutral source catalog
+- `packages/flutter`: Dart package, themes, components, tests, and showcase
+- `packages/react`: npm package and contextual CSS themes
+- `packages/compose`: Android library and Material 3 adapter
+- `packages/swift`: SwiftUI implementation used by the root `Package.swift`
+- `component_manifest.json`: shared component and accessibility contract
+- `platform_manifest.json`: cross-platform implementation and catalog coverage
 
 Components expose disabled, loading, error, helper, and focus-friendly states where applicable. Shared token categories include semantic colors, spacing, radii, sizing, typography, motion, elevation, and responsive layout values.
 

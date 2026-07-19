@@ -36,7 +36,7 @@ def pascal_id(value):
 def system_file(platform, system_id):
     if platform == "flutter":
         filename = re.sub(r"[^a-z0-9]+", "_", system_id.lower()).strip("_")
-        return root / "lib/src/theme/generated" / f"{filename}.dart"
+        return root / "packages/flutter/lib/src/theme/generated" / f"{filename}.dart"
     if platform == "react":
         return root / "packages/react/src/design-systems" / f"{system_id}.ts"
     if platform == "compose":

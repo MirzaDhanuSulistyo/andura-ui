@@ -3,7 +3,7 @@
   "package": "andura_ui",
   "platform": "flutter",
   "description": "Implementation inventory for the Andura Flutter design system.",
-  "sourceOfTruth": "lib/andura_ui.dart",
+  "sourceOfTruth": "packages/flutter/lib/andura_ui.dart",
   "components": [
     {
       "name": "AnduraButton",
@@ -465,8 +465,8 @@
     }
   ],
   "foundations": {
-    "colors": "lib/src/foundations/andura_colors.dart",
-    "tokens": "lib/src/foundations/andura_tokens.dart",
-    "theme": "lib/src/theme/andura_theme.dart"
+    "colors": "packages/flutter/lib/src/foundations/andura_colors.dart",
+    "tokens": "packages/flutter/lib/src/foundations/andura_tokens.dart",
+    "theme": "packages/flutter/lib/src/theme/andura_theme.dart"
   }
 }

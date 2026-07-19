@@ -17,12 +17,37 @@ kotlin { jvmToolchain(17) }
 android { buildFeatures { compose = true } }
 
 group = "com.andura.ui"
-version = "0.2.0"
+version = "0.3.0"
 
 afterEvaluate {
     publishing {
         publications {
-            create<MavenPublication>("release") { from(components["release"]) }
+            create<MavenPublication>("release") {
+                from(components["release"])
+                artifactId = "andura"
+                pom {
+                    name.set("Andura UI Compose")
+                    description.set("Jetpack Compose adapter for the Andura UI design system.")
+                    url.set("https://github.com/MirzaDhanuSulistyo/andura-ui")
+                    licenses {
+                        license {
+                            name.set("MIT License")
+                            url.set("https://opensource.org/licenses/MIT")
+                        }
+                    }
+                    scm { url.set("https://github.com/MirzaDhanuSulistyo/andura-ui") }
+                }
+            }
+        }
+        repositories {
+            maven {
+                name = "GitHubPackages"
+                url = uri("https://maven.pkg.github.com/MirzaDhanuSulistyo/andura-ui")
+                credentials {
+                    username = System.getenv("GITHUB_ACTOR")
+                    password = System.getenv("GITHUB_TOKEN")
+                }
+            }
         }
     }
 }

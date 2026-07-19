@@ -22,7 +22,9 @@ for group in ("color", "spacing", "radius", "size", "elevation", "motion", "layo
     if not isinstance(tokens.get(group), dict) or not tokens[group]:
         errors.append(f"tokens: missing non-empty group '{group}'")
 
-source_text = "\n".join(p.read_text() for p in (ROOT / "lib").rglob("*.dart"))
+source_text = "\n".join(
+    p.read_text() for p in (ROOT / "packages/flutter/lib").rglob("*.dart")
+)
 seen = set()
 for component in manifest.get("components", []):
     name = component.get("name")
@@ -37,7 +39,7 @@ for component in manifest.get("components", []):
         errors.append(f"manifest: component '{name}' has no states")
 
 for path in [
-    "lib/src/foundations/generated_tokens.dart",
+    "packages/flutter/lib/src/foundations/generated_tokens.dart",
     "packages/react/tokens.css",
     "packages/compose/AnduraTokens.kt",
     "packages/swift/AnduraTokens.swift",

@@ -1,6 +1,12 @@
 {
   "name": "@andura-ui/react",
-  "version": "0.2.0",
+  "version": "0.3.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MirzaDhanuSulistyo/andura-ui.git",
+    "directory": "packages/react"
+  },
   "type": "module",
   "main": "./dist/src/index.cjs",
   "module": "./dist/src/index.js",
