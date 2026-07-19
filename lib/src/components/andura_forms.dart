@@ -12,6 +12,7 @@ class AnduraTextField extends StatelessWidget {
     this.suffixIcon,
     this.obscureText = false,
     this.autofocus = false,
+    this.autocorrect = true,
     this.keyboardType,
     this.textCapitalization = TextCapitalization.none,
     this.textInputAction,
@@ -26,6 +27,7 @@ class AnduraTextField extends StatelessWidget {
   final Widget? suffixIcon;
   final bool obscureText;
   final bool autofocus;
+  final bool autocorrect;
   final TextInputType? keyboardType;
   final TextCapitalization textCapitalization;
   final TextInputAction? textInputAction;
@@ -37,6 +39,7 @@ class AnduraTextField extends StatelessWidget {
     controller: controller,
     obscureText: obscureText,
     autofocus: autofocus,
+    autocorrect: autocorrect,
     keyboardType: keyboardType,
     textCapitalization: textCapitalization,
     textInputAction: textInputAction,
