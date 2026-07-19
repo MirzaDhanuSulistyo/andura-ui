@@ -12,16 +12,36 @@ class ShowcaseApp extends StatefulWidget {
 
 class _ShowcaseAppState extends State<ShowcaseApp> {
   var dark = false;
+  var systemId = 'andura';
+
+  ThemeData _theme(Brightness brightness) => systemId == 'andura'
+      ? AnduraTheme.create(brightness)
+      : AnduraTheme.forSystem(systemId, brightness);
 
   @override
   Widget build(BuildContext context) => MaterialApp(
     debugShowCheckedModeBanner: false,
-    theme: AnduraTheme.light,
-    darkTheme: AnduraTheme.dark,
+    theme: _theme(Brightness.light),
+    darkTheme: _theme(Brightness.dark),
     themeMode: dark ? ThemeMode.dark : ThemeMode.light,
     home: AnduraPage(
       title: 'Andura UI',
       actions: [
+        DropdownButtonHideUnderline(
+          child: DropdownButton<String>(
+            value: systemId,
+            menuMaxHeight: 480,
+            onChanged: (value) => setState(() => systemId = value!),
+            items: [
+              const DropdownMenuItem(
+                value: 'andura',
+                child: Text('Andura (legacy)'),
+              ),
+              for (final system in AnduraDesignSystems.all)
+                DropdownMenuItem(value: system.id, child: Text(system.name)),
+            ],
+          ),
+        ),
         IconButton(
           tooltip: 'Toggle theme',
           onPressed: () => setState(() => dark = !dark),
@@ -165,6 +185,53 @@ class _ShowcaseState extends State<_Showcase> {
       const SizedBox(height: AnduraSpacing.xl),
       const AnduraEmptyState(
         message: 'Empty and feedback states are reusable too.',
+      ),
+      const SizedBox(height: AnduraSpacing.xl),
+      const AnduraSectionHeader(title: 'Open Design component coverage'),
+      const SizedBox(height: AnduraSpacing.md),
+      const AnduraAlert(
+        title: 'Catalog ready',
+        message: 'Shared components now consume contextual design tokens.',
+        intent: AnduraIntent.success,
+      ),
+      const SizedBox(height: AnduraSpacing.md),
+      AnduraSwitch(
+        label: 'Theme-aware switch',
+        value: checked,
+        onChanged: (value) => setState(() => checked = value),
+      ),
+      AnduraTabs<int>(
+        values: const [0, 1, 2],
+        selected: choice,
+        label: (value) => ['Overview', 'Tokens', 'Components'][value],
+        onSelected: (value) => setState(() => choice = value),
+      ),
+      const SizedBox(height: AnduraSpacing.md),
+      const Wrap(
+        spacing: AnduraSpacing.sm,
+        runSpacing: AnduraSpacing.sm,
+        children: [
+          AnduraChip(label: 'Badge / chip'),
+          AnduraKeyboardKey(label: '⌘ K'),
+          AnduraLink(
+            label: 'Reference link',
+            icon: Icons.arrow_forward,
+            trailingIcon: true,
+          ),
+        ],
+      ),
+      const SizedBox(height: AnduraSpacing.md),
+      const AnduraProgress(
+        label: 'Catalog coverage',
+        value: 1,
+        showPercentage: true,
+      ),
+      const SizedBox(height: AnduraSpacing.md),
+      const AnduraAccordion(
+        title: Text('Portable component recipe'),
+        child: Text(
+          'The widget implementation is shared; the selected system supplies its visual tokens.',
+        ),
       ),
     ],
   );

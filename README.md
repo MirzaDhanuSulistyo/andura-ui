@@ -47,6 +47,38 @@ cd example
 flutter run
 ```
 
+The showcase includes a selector for all 151 imported Open Design systems. The
+original Andura theme remains the default for backwards compatibility.
+
+## Open Design catalog
+
+Andura exposes the normalized Open Design catalog without duplicating widgets:
+
+```dart
+final systems = AnduraDesignSystems.all; // 151 entries
+
+MaterialApp(
+  theme: AnduraTheme.forSystem('linear-app', Brightness.light),
+  darkTheme: AnduraTheme.forSystem('linear-app', Brightness.dark),
+  home: const MyApp(),
+);
+```
+
+Shared widgets read `AnduraThemeTokens.of(context)`, allowing colors,
+typography, radii, spacing, motion, and layout values to change by system.
+`docs/open_design_audit.json` contains the complete system/component coverage
+matrix. To refresh it from a local Open Design checkout:
+
+```sh
+python3 scripts/import_open_design.py ~/code/open-design/design-systems
+```
+
+Open Design fixtures are web references. Their nine normalized component
+groups map to shared Flutter implementations; brand-specific CSS classes are
+kept as recipes rather than treated as stable component APIs. Imported systems
+are aesthetic inspirations and are not official brand packages; source
+attribution remains in the upstream Open Design manifests.
+
 ## Package structure
 
 - `foundations`: colors, spacing, radii, sizing, typography, motion, elevation, and layout tokens

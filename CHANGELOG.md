@@ -1,3 +1,13 @@
+## 0.2.0
+
+- Add 151 normalized Open Design theme presets and runtime theme selection.
+- Add contextual semantic tokens while preserving the original Andura API.
+- Cover all nine Open Design component groups with shared Flutter widgets.
+- Add alerts, chips, links, keyboard keys, switches, checkboxes, radios, tabs,
+  progress, skeletons, accordions, stats, menus, bottom sheets, and responsive
+  layout primitives.
+- Add a reproducible catalog importer and complete component coverage report.
+
 ## 0.1.0
 
 - Add light and dark Material 3 themes with configurable Poppins loading.

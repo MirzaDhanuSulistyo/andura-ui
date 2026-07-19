@@ -1,0 +1,8547 @@
+{
+  "schemaVersion": 1,
+  "source": "open-design/design-systems",
+  "systemCount": 151,
+  "systemsWithGeneratedComponentManifest": 150,
+  "legacyComponentFixtures": [
+    "tom-modern"
+  ],
+  "normalizedComponentGroups": {
+    "badges": {
+      "systems": 144,
+      "flutterImplementations": [
+        "AnduraBadge",
+        "AnduraChip"
+      ]
+    },
+    "buttons": {
+      "systems": 151,
+      "flutterImplementations": [
+        "AnduraButton",
+        "AnduraIconButton"
+      ]
+    },
+    "cards": {
+      "systems": 145,
+      "flutterImplementations": [
+        "AnduraCard",
+        "AnduraStat",
+        "AnduraAccordion"
+      ]
+    },
+    "icons": {
+      "systems": 62,
+      "flutterImplementations": [
+        "AnduraIconButton"
+      ]
+    },
+    "inputs": {
+      "systems": 150,
+      "flutterImplementations": [
+        "AnduraTextField",
+        "AnduraTextArea",
+        "AnduraSelect",
+        "AnduraCheckbox",
+        "AnduraRadio",
+        "AnduraSwitch"
+      ]
+    },
+    "keyboard": {
+      "systems": 49,
+      "flutterImplementations": [
+        "AnduraKeyboardKey"
+      ]
+    },
+    "layout": {
+      "systems": 151,
+      "flutterImplementations": [
+        "AnduraPage",
+        "AnduraResponsiveContainer",
+        "AnduraResponsiveGrid",
+        "AnduraDivider"
+      ]
+    },
+    "links": {
+      "systems": 151,
+      "flutterImplementations": [
+        "AnduraLink"
+      ]
+    },
+    "typography": {
+      "systems": 151,
+      "flutterImplementations": [
+        "AnduraSectionHeader",
+        "AnduraErrorText"
+      ]
+    }
+  },
+  "topSourceClasses": [
+    {
+      "name": "btn",
+      "systems": 150
+    },
+    {
+      "name": "container",
+      "systems": 150
+    },
+    {
+      "name": "field",
+      "systems": 147
+    },
+    {
+      "name": "btn-primary",
+      "systems": 144
+    },
+    {
+      "name": "eyebrow",
+      "systems": 142
+    },
+    {
+      "name": "lead",
+      "systems": 137
+    },
+    {
+      "name": "btn-secondary",
+      "systems": 130
+    },
+    {
+      "name": "hero",
+      "systems": 98
+    },
+    {
+      "name": "metric",
+      "systems": 87
+    },
+    {
+      "name": "actions",
+      "systems": 85
+    },
+    {
+      "name": "panel",
+      "systems": 85
+    },
+    {
+      "name": "status",
+      "systems": 85
+    },
+    {
+      "name": "accent",
+      "systems": 84
+    },
+    {
+      "name": "card-row",
+      "systems": 84
+    },
+    {
+      "name": "fg",
+      "systems": 84
+    },
+    {
+      "name": "lower",
+      "systems": 84
+    },
+    {
+      "name": "metric-grid",
+      "systems": 84
+    },
+    {
+      "name": "mini-card",
+      "systems": 84
+    },
+    {
+      "name": "page",
+      "systems": 84
+    },
+    {
+      "name": "panel-head",
+      "systems": 84
+    },
+    {
+      "name": "stack",
+      "systems": 84
+    },
+    {
+      "name": "surface",
+      "systems": 84
+    },
+    {
+      "name": "swatch",
+      "systems": 84
+    },
+    {
+      "name": "swatches",
+      "systems": 84
+    },
+    {
+      "name": "tile",
+      "systems": 84
+    },
+    {
+      "name": "warm",
+      "systems": 84
+    },
+    {
+      "name": "hero-actions",
+      "systems": 66
+    },
+    {
+      "name": "stack-4",
+      "systems": 65
+    },
+    {
+      "name": "features-grid",
+      "systems": 61
+    },
+    {
+      "name": "card",
+      "systems": 60
+    },
+    {
+      "name": "stack-3",
+      "systems": 59
+    },
+    {
+      "name": "body-muted",
+      "systems": 58
+    },
+    {
+      "name": "body-sm",
+      "systems": 58
+    },
+    {
+      "name": "icon",
+      "systems": 56
+    },
+    {
+      "name": "hero-grid",
+      "systems": 53
+    },
+    {
+      "name": "field-help",
+      "systems": 52
+    },
+    {
+      "name": "form",
+      "systems": 51
+    },
+    {
+      "name": "form-row",
+      "systems": 50
+    },
+    {
+      "name": "form-actions",
+      "systems": 49
+    },
+    {
+      "name": "row-between",
+      "systems": 43
+    },
+    {
+      "name": "badge",
+      "systems": 42
+    },
+    {
+      "name": "badge-dot",
+      "systems": 40
+    },
+    {
+      "name": "hero-meta",
+      "systems": 38
+    },
+    {
+      "name": "badge-success",
+      "systems": 34
+    },
+    {
+      "name": "btn-ghost",
+      "systems": 24
+    },
+    {
+      "name": "body-meta",
+      "systems": 13
+    },
+    {
+      "name": "stack-6",
+      "systems": 11
+    },
+    {
+      "name": "lede",
+      "systems": 10
+    },
+    {
+      "name": "badge-accent",
+      "systems": 9
+    },
+    {
+      "name": "stack-5",
+      "systems": 9
+    },
+    {
+      "name": "pill",
+      "systems": 8
+    },
+    {
+      "name": "badge-muted",
+      "systems": 8
+    },
+    {
+      "name": "feature-icon",
+      "systems": 7
+    },
+    {
+      "name": "chip",
+      "systems": 6
+    },
+    {
+      "name": "card-icon",
+      "systems": 5
+    },
+    {
+      "name": "card-eyebrow",
+      "systems": 5
+    },
+    {
+      "name": "card-link",
+      "systems": 4
+    },
+    {
+      "name": "nav-links",
+      "systems": 4
+    },
+    {
+      "name": "btn-outline",
+      "systems": 4
+    },
+    {
+      "name": "stack-2",
+      "systems": 4
+    },
+    {
+      "name": "tag",
+      "systems": 4
+    },
+    {
+      "name": "dot",
+      "systems": 4
+    },
+    {
+      "name": "badge-status",
+      "systems": 3
+    },
+    {
+      "name": "btn-icon",
+      "systems": 3
+    },
+    {
+      "name": "nav-logo",
+      "systems": 3
+    },
+    {
+      "name": "nav-row",
+      "systems": 3
+    },
+    {
+      "name": "tab",
+      "systems": 3
+    },
+    {
+      "name": "card-feature",
+      "systems": 3
+    },
+    {
+      "name": "nav",
+      "systems": 3
+    },
+    {
+      "name": "nav-brand",
+      "systems": 3
+    },
+    {
+      "name": "hero-meta-row",
+      "systems": 3
+    },
+    {
+      "name": "section-dark",
+      "systems": 3
+    },
+    {
+      "name": "tok-str",
+      "systems": 3
+    },
+    {
+      "name": "btn-accent",
+      "systems": 3
+    },
+    {
+      "name": "active",
+      "systems": 3
+    },
+    {
+      "name": "meta",
+      "systems": 3
+    },
+    {
+      "name": "metric-label",
+      "systems": 3
+    },
+    {
+      "name": "metric-row",
+      "systems": 3
+    },
+    {
+      "name": "metric-value",
+      "systems": 3
+    },
+    {
+      "name": "prompt",
+      "systems": 3
+    },
+    {
+      "name": "card-title",
+      "systems": 3
+    },
+    {
+      "name": "badge-soft",
+      "systems": 2
+    },
+    {
+      "name": "btn-sm",
+      "systems": 2
+    },
+    {
+      "name": "divider-soft",
+      "systems": 2
+    },
+    {
+      "name": "row-cluster",
+      "systems": 2
+    },
+    {
+      "name": "search-submit",
+      "systems": 2
+    },
+    {
+      "name": "band-light",
+      "systems": 2
+    },
+    {
+      "name": "band-soft",
+      "systems": 2
+    },
+    {
+      "name": "btn-pill",
+      "systems": 2
+    },
+    {
+      "name": "nav-inner",
+      "systems": 2
+    },
+    {
+      "name": "btn-subtle",
+      "systems": 2
+    },
+    {
+      "name": "pill-dot",
+      "systems": 2
+    },
+    {
+      "name": "badge-danger",
+      "systems": 2
+    },
+    {
+      "name": "stat-label",
+      "systems": 2
+    },
+    {
+      "name": "ticker",
+      "systems": 2
+    },
+    {
+      "name": "code-block",
+      "systems": 2
+    },
+    {
+      "name": "link-accent",
+      "systems": 2
+    },
+    {
+      "name": "stat-number",
+      "systems": 2
+    },
+    {
+      "name": "tok-com",
+      "systems": 2
+    },
+    {
+      "name": "card-featured",
+      "systems": 2
+    }
+  ],
+  "systems": [
+    {
+      "id": "agentic",
+      "name": "Agentic",
+      "category": "Themed & Unique",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "airbnb",
+      "name": "Airbnb",
+      "category": "E-Commerce & Retail",
+      "groups": [
+        "buttons",
+        "inputs",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 67,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "airtable",
+      "name": "Airtable",
+      "category": "Design & Creative",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 35,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "ant",
+      "name": "Ant",
+      "category": "Professional & Corporate",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "apple",
+      "name": "Apple",
+      "category": "Media & Consumer",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 35,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "application",
+      "name": "Application",
+      "category": "Professional & Corporate",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "arc",
+      "name": "Arc Browser",
+      "category": "Productivity & SaaS",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 27,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "artistic",
+      "name": "Artistic",
+      "category": "Creative & Artistic",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "atelier-zero",
+      "name": "Atelier Zero",
+      "category": "Editorial \u00b7 Studio",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "bento",
+      "name": "Bento",
+      "category": "Layout & Structure",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "binance",
+      "name": "Binance.US",
+      "category": "Fintech & Crypto",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 46,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "bmw",
+      "name": "BMW",
+      "category": "Automotive",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 28,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "bmw-m",
+      "name": "BMW M",
+      "category": "Automotive",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "bold",
+      "name": "Bold",
+      "category": "Bold & Expressive",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "brutalism",
+      "name": "Brutalism",
+      "category": "Bold & Expressive",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "bugatti",
+      "name": "Bugatti",
+      "category": "Automotive",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "cafe",
+      "name": "Cafe",
+      "category": "Creative & Artistic",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "cal",
+      "name": "Cal.com",
+      "category": "Productivity & SaaS",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "canva",
+      "name": "Canva",
+      "category": "Design & Creative",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 32,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "cisco",
+      "name": "Cisco",
+      "category": "Backend & Data",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "claude",
+      "name": "Claude (Anthropic)",
+      "category": "AI & LLM",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 25,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "clay",
+      "name": "Clay",
+      "category": "Design & Creative",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "claymorphism",
+      "name": "Claymorphism",
+      "category": "Morphism & Effects",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "clean",
+      "name": "Clean",
+      "category": "Modern & Minimal",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "clickhouse",
+      "name": "ClickHouse",
+      "category": "Backend & Data",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 38,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "cohere",
+      "name": "Cohere",
+      "category": "AI & LLM",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 25,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "coinbase",
+      "name": "Coinbase",
+      "category": "Fintech & Crypto",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 40,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "colorful",
+      "name": "Colorful",
+      "category": "Bold & Expressive",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "composio",
+      "name": "Composio",
+      "category": "Backend & Data",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "contemporary",
+      "name": "Contemporary",
+      "category": "Modern & Minimal",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "corporate",
+      "name": "Corporate",
+      "category": "Professional & Corporate",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "cosmic",
+      "name": "Cosmic",
+      "category": "Creative & Artistic",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "creative",
+      "name": "Creative",
+      "category": "Creative & Artistic",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "category": "Developer Tools",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 37,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "dashboard",
+      "name": "Dashboard",
+      "category": "Professional & Corporate",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "default",
+      "name": "Neutral Modern",
+      "category": "Starter",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 25,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "discord",
+      "name": "Discord",
+      "category": "Productivity & SaaS",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 17,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "dithered",
+      "name": "Dithered",
+      "category": "Retro & Nostalgic",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "doodle",
+      "name": "Doodle",
+      "category": "Creative & Artistic",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "dramatic",
+      "name": "Dramatic",
+      "category": "Bold & Expressive",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "duolingo",
+      "name": "Duolingo",
+      "category": "Productivity & SaaS",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 36,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "editorial",
+      "name": "Editorial",
+      "category": "Creative & Artistic",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "elegant",
+      "name": "Elegant",
+      "category": "Professional & Corporate",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "elevenlabs",
+      "name": "ElevenLabs",
+      "category": "AI & LLM",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 24,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "energetic",
+      "name": "Energetic",
+      "category": "Bold & Expressive",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "category": "Professional & Corporate",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "expo",
+      "name": "Expo",
+      "category": "Developer Tools",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "expressive",
+      "name": "Expressive",
+      "category": "Bold & Expressive",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "fantasy",
+      "name": "Fantasy",
+      "category": "Creative & Artistic",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "ferrari",
+      "name": "Ferrari",
+      "category": "Automotive",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "category": "Design & Creative",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "links",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 17,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "flat",
+      "name": "Flat",
+      "category": "Modern & Minimal",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "framer",
+      "name": "Framer",
+      "category": "Design & Creative",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 32,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "friendly",
+      "name": "Friendly",
+      "category": "Creative & Artistic",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "futuristic",
+      "name": "Futuristic",
+      "category": "Themed & Unique",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "category": "Developer Tools",
+      "groups": [
+        "buttons",
+        "inputs",
+        "badges",
+        "links",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 21,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "glassmorphism",
+      "name": "Glassmorphism",
+      "category": "Morphism & Effects",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "gradient",
+      "name": "Gradient",
+      "category": "Morphism & Effects",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "hashicorp",
+      "name": "HashiCorp",
+      "category": "Backend & Data",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 27,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "hud",
+      "name": "HUD Design System",
+      "category": "Themed & Unique",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "huggingface",
+      "name": "Hugging Face",
+      "category": "AI & LLM",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "ibm",
+      "name": "IBM",
+      "category": "Media & Consumer",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "intercom",
+      "name": "Intercom",
+      "category": "Productivity & SaaS",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 37,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "kami",
+      "name": "kami (\u7d19 / \u7eb8)",
+      "category": "Editorial & Print",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "kraken",
+      "name": "Kraken",
+      "category": "Fintech & Crypto",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "lamborghini",
+      "name": "Lamborghini",
+      "category": "Automotive",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "levels",
+      "name": "Levels",
+      "category": "Layout & Structure",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "linear-app",
+      "name": "Linear",
+      "category": "Productivity & SaaS",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 15,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "lingo",
+      "name": "Lingo",
+      "category": "Creative & Artistic",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "loom",
+      "name": "Loom Design System",
+      "category": "Themed & Unique",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 31,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "lovable",
+      "name": "Lovable",
+      "category": "Developer Tools",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 24,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "luxury",
+      "name": "Luxury",
+      "category": "Professional & Corporate",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "mastercard",
+      "name": "Mastercard",
+      "category": "Fintech & Crypto",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "material",
+      "name": "Material",
+      "category": "Professional & Corporate",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "meta",
+      "name": "Meta (Store)",
+      "category": "E-Commerce & Retail",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 31,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "minimal",
+      "name": "Minimal",
+      "category": "Modern & Minimal",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax",
+      "category": "AI & LLM",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 33,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "mintlify",
+      "name": "Mintlify",
+      "category": "Productivity & SaaS",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 34,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "miro",
+      "name": "Miro",
+      "category": "Design & Creative",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "mission-control",
+      "name": "Mission Control Design System",
+      "category": "Developer Tools",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "mistral-ai",
+      "name": "Mistral AI",
+      "category": "AI & LLM",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 25,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "modern",
+      "name": "Modern",
+      "category": "Modern & Minimal",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "mongodb",
+      "name": "MongoDB",
+      "category": "Backend & Data",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "mono",
+      "name": "Mono",
+      "category": "Modern & Minimal",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "neobrutalism",
+      "name": "Neobrutalism",
+      "category": "Bold & Expressive",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "neon",
+      "name": "Neon",
+      "category": "Morphism & Effects",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "neumorphism",
+      "name": "Neumorphism",
+      "category": "Morphism & Effects",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "nike",
+      "name": "Nike",
+      "category": "E-Commerce & Retail",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 29,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "category": "Productivity & SaaS",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 22,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "nvidia",
+      "name": "NVIDIA",
+      "category": "Media & Consumer",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 31,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "ollama",
+      "name": "Ollama",
+      "category": "AI & LLM",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 34,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "category": "AI & LLM",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 18,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "opencode-ai",
+      "name": "OpenCode",
+      "category": "AI & LLM",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "pacman",
+      "name": "Pacman",
+      "category": "Themed & Unique",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "paper",
+      "name": "Paper",
+      "category": "Retro & Nostalgic",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity AI",
+      "category": "AI & LLM",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "links",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 23,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "perspective",
+      "name": "Perspective",
+      "category": "Layout & Structure",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "pinterest",
+      "name": "Pinterest",
+      "category": "Media & Consumer",
+      "groups": [
+        "buttons",
+        "inputs",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 43,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "playstation",
+      "name": "PlayStation",
+      "category": "Media & Consumer",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 28,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "posthog",
+      "name": "PostHog",
+      "category": "Backend & Data",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 42,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "premium",
+      "name": "Premium",
+      "category": "Professional & Corporate",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "professional",
+      "name": "Professional",
+      "category": "Professional & Corporate",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "publication",
+      "name": "Publication",
+      "category": "Creative & Artistic",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "raycast",
+      "name": "Raycast",
+      "category": "Developer Tools",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 23,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "refined",
+      "name": "Refined",
+      "category": "Modern & Minimal",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "renault",
+      "name": "Renault",
+      "category": "Automotive",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "replicate",
+      "name": "Replicate",
+      "category": "AI & LLM",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 25,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "resend",
+      "name": "Resend",
+      "category": "Productivity & SaaS",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 39,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "retro",
+      "name": "Retro",
+      "category": "Retro & Nostalgic",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "revolut",
+      "name": "Revolut",
+      "category": "Fintech & Crypto",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "runwayml",
+      "name": "Runway",
+      "category": "AI & LLM",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 35,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "sanity",
+      "name": "Sanity",
+      "category": "Backend & Data",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "sentry",
+      "name": "Sentry",
+      "category": "Backend & Data",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 27,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "shadcn",
+      "name": "Shadcn",
+      "category": "Modern & Minimal",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 32,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "shopify",
+      "name": "Shopify",
+      "category": "E-Commerce & Retail",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "links",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 15,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "simple",
+      "name": "Simple",
+      "category": "Modern & Minimal",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "skeumorphism",
+      "name": "Skeumorphism",
+      "category": "Morphism & Effects",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "category": "Productivity & SaaS",
+      "groups": [
+        "buttons",
+        "inputs",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 19,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "sleek",
+      "name": "Sleek",
+      "category": "Modern & Minimal",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "spacex",
+      "name": "SpaceX",
+      "category": "Media & Consumer",
+      "groups": [
+        "buttons",
+        "inputs",
+        "links",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 22,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "spacious",
+      "name": "Spacious",
+      "category": "Layout & Structure",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "category": "Media & Consumer",
+      "groups": [
+        "buttons",
+        "cards",
+        "links",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 20,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "starbucks",
+      "name": "Starbucks",
+      "category": "E-Commerce & Retail",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 30,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "storytelling",
+      "name": "Storytelling",
+      "category": "Creative & Artistic",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "category": "Fintech & Crypto",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 45,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase",
+      "category": "Backend & Data",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 30,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "superhuman",
+      "name": "Superhuman",
+      "category": "Developer Tools",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 31,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "tesla",
+      "name": "Tesla",
+      "category": "Automotive",
+      "groups": [
+        "buttons",
+        "inputs",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 37,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "tetris",
+      "name": "Tetris",
+      "category": "Themed & Unique",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "theverge",
+      "name": "The Verge",
+      "category": "Media & Consumer",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "together-ai",
+      "name": "Together AI",
+      "category": "AI & LLM",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 25,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "tom-modern",
+      "name": "Tom Modern Design",
+      "category": "Starter",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 0,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "totality-festival",
+      "name": "Totality Festival",
+      "category": "Themed & Unique",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "trading-terminal",
+      "name": "Trading Terminal Design System",
+      "category": "Themed & Unique",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "uber",
+      "name": "Uber",
+      "category": "Media & Consumer",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 19,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "urdu",
+      "name": "Urdu Modern (Indus Script System)",
+      "category": "Editorial / Personal / Publication",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "category": "Developer Tools",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 38,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "vibrant",
+      "name": "Vibrant",
+      "category": "Bold & Expressive",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "vintage",
+      "name": "Vintage",
+      "category": "Retro & Nostalgic",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "vodafone",
+      "name": "Vodafone",
+      "category": "Media & Consumer",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "voltagent",
+      "name": "VoltAgent",
+      "category": "AI & LLM",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "warm-editorial",
+      "name": "Warm Editorial",
+      "category": "Starter",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "warp",
+      "name": "Warp",
+      "category": "Developer Tools",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 28,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "webex",
+      "name": "Webex",
+      "category": "Productivity & SaaS",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "webflow",
+      "name": "Webflow",
+      "category": "Design & Creative",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 28,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "wechat",
+      "name": "WeChat Design System",
+      "category": "Social & Messaging",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 34,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "wired",
+      "name": "WIRED",
+      "category": "Media & Consumer",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "wise",
+      "name": "Wise",
+      "category": "Fintech & Crypto",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 28,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "x-ai",
+      "name": "xAI",
+      "category": "AI & LLM",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 23,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "xiaohongshu",
+      "name": "Xiaohongshu",
+      "category": "Media & Consumer",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "keyboard",
+        "icons",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 49,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "keyboard": [
+          "AnduraKeyboardKey"
+        ],
+        "icons": [
+          "AnduraIconButton"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    },
+    {
+      "id": "zapier",
+      "name": "Zapier",
+      "category": "Productivity & SaaS",
+      "groups": [
+        "buttons",
+        "inputs",
+        "cards",
+        "badges",
+        "links",
+        "typography",
+        "layout"
+      ],
+      "sourceClassCount": 26,
+      "flutterCoverage": {
+        "buttons": [
+          "AnduraButton",
+          "AnduraIconButton"
+        ],
+        "inputs": [
+          "AnduraTextField",
+          "AnduraTextArea",
+          "AnduraSelect",
+          "AnduraCheckbox",
+          "AnduraRadio",
+          "AnduraSwitch"
+        ],
+        "cards": [
+          "AnduraCard",
+          "AnduraStat",
+          "AnduraAccordion"
+        ],
+        "badges": [
+          "AnduraBadge",
+          "AnduraChip"
+        ],
+        "links": [
+          "AnduraLink"
+        ],
+        "typography": [
+          "AnduraSectionHeader",
+          "AnduraErrorText"
+        ],
+        "layout": [
+          "AnduraPage",
+          "AnduraResponsiveContainer",
+          "AnduraResponsiveGrid",
+          "AnduraDivider"
+        ]
+      }
+    }
+  ]
+}

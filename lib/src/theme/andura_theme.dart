@@ -4,8 +4,10 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../foundations/andura_colors.dart';
 import '../foundations/andura_tokens.dart';
+import 'andura_design_system.dart';
+import 'generated_design_systems.dart';
 
-/// The standard light and dark themes for Andura products.
+/// Andura themes plus the complete imported Open Design theme catalog.
 abstract final class AnduraTheme {
   /// Controls whether Google Fonts may fetch Poppins at runtime.
   /// Disable this when the host application bundles the font assets.
@@ -13,9 +15,24 @@ abstract final class AnduraTheme {
     GoogleFonts.config.allowRuntimeFetching = allowRuntimeFetching;
   }
 
+  /// Backwards-compatible Andura themes used by existing applications.
   static ThemeData get light => create(Brightness.light);
   static ThemeData get dark => create(Brightness.dark);
 
+  /// Creates one of the 151 imported Open Design systems by ID.
+  ///
+  /// When [brightness] differs from the system's native canvas, Material
+  /// derives accessible surfaces while retaining its identity accent.
+  static ThemeData forSystem(String id, [Brightness? brightness]) {
+    final system = AnduraDesignSystems.byId(id);
+    final preferred = system.nativeBrightness == AnduraNativeBrightness.dark
+        ? Brightness.dark
+        : Brightness.light;
+    return _createSystem(system, brightness ?? preferred);
+  }
+
+  /// Creates the original Andura theme. Kept stable for KeyNest and other
+  /// existing consumers.
   static ThemeData create(Brightness brightness, {Color? seedColor}) {
     final isDark = brightness == Brightness.dark;
     final primary = seedColor ?? AnduraColors.primary;
@@ -34,99 +51,218 @@ abstract final class AnduraTheme {
     final text = GoogleFonts.poppinsTextTheme(
       base.textTheme,
     ).apply(bodyColor: scheme.onSurface, displayColor: scheme.onSurface);
-
     final themedText = text.copyWith(
       titleLarge: text.titleLarge?.merge(AnduraTextStyles.title),
       titleMedium: text.titleMedium?.merge(AnduraTextStyles.section),
       labelLarge: text.labelLarge?.merge(AnduraTextStyles.label),
       bodySmall: text.bodySmall?.merge(AnduraTextStyles.caption),
     );
+    final tokens = AnduraThemeTokens(
+      systemId: 'andura',
+      background: scheme.surface,
+      surface: scheme.surfaceContainerLow,
+      surfaceWarm: scheme.surfaceContainerHighest,
+      foreground: scheme.onSurface,
+      foregroundSecondary: scheme.onSurfaceVariant,
+      muted: scheme.onSurfaceVariant,
+      border: scheme.outlineVariant,
+      accent: primary,
+      accentOn: scheme.onPrimary,
+      success: AnduraColors.success,
+      warning: AnduraColors.warning,
+      danger: AnduraColors.danger,
+      radiusSm: AnduraRadii.sm,
+      radiusMd: AnduraRadii.md,
+      radiusLg: AnduraRadii.lg,
+      radiusPill: AnduraRadii.pill,
+      space1: AnduraSpacing.xs,
+      space2: AnduraSpacing.sm,
+      space3: AnduraSpacing.md,
+      space4: AnduraSpacing.lg,
+      space6: AnduraSpacing.xl,
+      space8: AnduraSpacing.xxl,
+      motionFast: AnduraMotion.fast,
+      motionBase: AnduraMotion.standard,
+      containerMax: AnduraLayout.maxContentWidth,
+    );
+    return _finishTheme(base, themedText, tokens, isDark);
+  }
 
+  static ThemeData _createSystem(
+    AnduraDesignSystem system,
+    Brightness brightness,
+  ) {
+    final native = system.nativeBrightness == AnduraNativeBrightness.dark
+        ? Brightness.dark
+        : Brightness.light;
+    final accent = Color(system.accent);
+    final derived = ColorScheme.fromSeed(
+      seedColor: accent,
+      brightness: brightness,
+    );
+    final useSourceSurfaces = native == brightness;
+    final surface = useSourceSurfaces
+        ? Color(system.background)
+        : derived.surface;
+    final onSurface = useSourceSurfaces
+        ? Color(system.foreground)
+        : derived.onSurface;
+    final sourceTokens = AnduraThemeTokens.fromSystem(system);
+    final tokens = sourceTokens.copyWith(
+      background: surface,
+      surface: useSourceSurfaces
+          ? Color(system.surface)
+          : derived.surfaceContainerLow,
+      surfaceWarm: useSourceSurfaces
+          ? Color(system.surfaceWarm)
+          : derived.surfaceContainerHighest,
+      foreground: onSurface,
+      foregroundSecondary: useSourceSurfaces
+          ? Color(system.foregroundSecondary)
+          : derived.onSurfaceVariant,
+      muted: useSourceSurfaces ? Color(system.muted) : derived.onSurfaceVariant,
+      border: useSourceSurfaces ? Color(system.border) : derived.outlineVariant,
+    );
+    final scheme = derived.copyWith(
+      primary: accent,
+      onPrimary: Color(system.accentOn),
+      surface: tokens.background,
+      onSurface: tokens.foreground,
+      error: Color(system.danger),
+      outline: tokens.border,
+      outlineVariant: tokens.border,
+      surfaceContainerLow: tokens.surface,
+      surfaceContainerHighest: tokens.surfaceWarm,
+    );
+    final base = ThemeData(
+      useMaterial3: true,
+      brightness: brightness,
+      colorScheme: scheme,
+      scaffoldBackgroundColor: tokens.background,
+    );
+    final text = base.textTheme
+        .apply(
+          fontFamily: system.fontBody,
+          bodyColor: tokens.foreground,
+          displayColor: tokens.foreground,
+        )
+        .copyWith(
+          displayLarge: base.textTheme.displayLarge?.copyWith(
+            fontFamily: system.fontDisplay,
+          ),
+          headlineLarge: base.textTheme.headlineLarge?.copyWith(
+            fontFamily: system.fontDisplay,
+          ),
+          bodyMedium: base.textTheme.bodyMedium?.copyWith(
+            fontSize: system.textBase,
+            fontFamily: system.fontBody,
+          ),
+        );
+    return _finishTheme(base, text, tokens, brightness == Brightness.dark);
+  }
+
+  static ThemeData _finishTheme(
+    ThemeData base,
+    TextTheme text,
+    AnduraThemeTokens tokens,
+    bool isDark,
+  ) {
+    final legacy = tokens.systemId == 'andura';
+    final themedText = text.copyWith(
+      titleLarge: text.titleLarge?.copyWith(fontWeight: FontWeight.w600),
+      titleMedium: text.titleMedium?.copyWith(fontWeight: FontWeight.w600),
+      labelLarge: text.labelLarge?.copyWith(fontWeight: FontWeight.w600),
+    );
+    final mediumShape = RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(tokens.radiusMd),
+    );
+    final inputBorder = OutlineInputBorder(
+      borderRadius: BorderRadius.circular(tokens.radiusMd),
+      borderSide: legacy ? BorderSide.none : BorderSide(color: tokens.border),
+    );
     return base.copyWith(
+      extensions: <ThemeExtension<dynamic>>[tokens],
       textTheme: themedText,
       appBarTheme: AppBarTheme(
-        backgroundColor: scheme.surface,
-        foregroundColor: scheme.onSurface,
+        backgroundColor: tokens.background,
+        foregroundColor: tokens.foreground,
         elevation: 0,
         scrolledUnderElevation: 0,
         centerTitle: false,
         systemOverlayStyle: isDark
             ? SystemUiOverlayStyle.light
             : SystemUiOverlayStyle.dark,
-        titleTextStyle: text.titleLarge?.copyWith(
-          color: scheme.onSurface,
+        titleTextStyle: themedText.titleLarge?.copyWith(
+          color: tokens.foreground,
           fontWeight: FontWeight.w600,
-          fontSize: 20,
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: primary,
-          foregroundColor: Colors.white,
+          backgroundColor: tokens.accent,
+          foregroundColor: tokens.accentOn,
           elevation: 0,
           minimumSize: const Size.fromHeight(AnduraSizes.control),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AnduraRadii.pill),
+            borderRadius: BorderRadius.circular(tokens.radiusPill),
           ),
-          textStyle: text.titleMedium?.copyWith(fontWeight: FontWeight.w600),
+          textStyle: themedText.titleMedium?.copyWith(
+            fontWeight: FontWeight.w600,
+          ),
         ),
       ),
       cardTheme: CardThemeData(
-        color: scheme.surfaceContainerLow,
+        color: tokens.surface,
         elevation: AnduraElevation.card,
         margin: EdgeInsets.zero,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(AnduraRadii.lg),
+          borderRadius: BorderRadius.circular(tokens.radiusLg),
+          side: legacy ? BorderSide.none : BorderSide(color: tokens.border),
         ),
       ),
+      dialogTheme: legacy
+          ? base.dialogTheme
+          : DialogThemeData(shape: mediumShape),
       bottomSheetTheme: BottomSheetThemeData(
-        backgroundColor: scheme.surfaceContainerLow,
-        modalBackgroundColor: scheme.surfaceContainerLow,
-        shape: const RoundedRectangleBorder(
+        backgroundColor: tokens.surface,
+        modalBackgroundColor: tokens.surface,
+        shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(
-            top: Radius.circular(AnduraRadii.sheet),
+            top: Radius.circular(legacy ? AnduraRadii.sheet : tokens.radiusLg),
           ),
         ),
       ),
       snackBarTheme: SnackBarThemeData(
         behavior: SnackBarBehavior.floating,
-        backgroundColor: scheme.surfaceContainerHighest,
+        backgroundColor: tokens.surfaceWarm,
         contentTextStyle: themedText.bodyMedium?.copyWith(
-          color: scheme.onSurface,
+          color: tokens.foreground,
           fontWeight: FontWeight.w500,
         ),
         elevation: AnduraElevation.card,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(AnduraRadii.md),
-        ),
+        shape: mediumShape,
       ),
       sliderTheme: SliderThemeData(
-        activeTrackColor: primary,
-        inactiveTrackColor: scheme.onSurfaceVariant.withValues(alpha: .25),
-        thumbColor: isDark ? scheme.onSurface : Colors.white,
-        overlayColor: primary.withValues(alpha: .12),
+        activeTrackColor: tokens.accent,
+        inactiveTrackColor: tokens.muted.withValues(alpha: .25),
+        thumbColor: isDark ? tokens.foreground : tokens.accentOn,
+        overlayColor: tokens.accent.withValues(alpha: .12),
         trackHeight: 6,
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: scheme.surfaceContainerHighest,
-        hintStyle: themedText.bodyMedium?.copyWith(
-          color: scheme.onSurfaceVariant,
+        fillColor: tokens.surfaceWarm,
+        hintStyle: themedText.bodyMedium?.copyWith(color: tokens.muted),
+        errorStyle: themedText.bodySmall?.copyWith(color: tokens.danger),
+        helperStyle: themedText.bodySmall?.copyWith(color: tokens.muted),
+        contentPadding: EdgeInsets.symmetric(
+          horizontal: legacy ? 20 : tokens.space4,
+          vertical: legacy ? 16 : tokens.space3,
         ),
-        errorStyle: themedText.bodySmall?.copyWith(color: scheme.error),
-        helperStyle: themedText.bodySmall?.copyWith(
-          color: scheme.onSurfaceVariant,
-        ),
-        contentPadding: const EdgeInsets.symmetric(
-          horizontal: 20,
-          vertical: 16,
-        ),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(AnduraRadii.md),
-          borderSide: BorderSide.none,
-        ),
+        border: inputBorder,
+        enabledBorder: inputBorder,
       ),
-      dividerColor: scheme.outlineVariant,
+      dividerColor: tokens.border,
     );
   }
 }

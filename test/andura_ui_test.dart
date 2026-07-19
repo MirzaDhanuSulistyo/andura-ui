@@ -3,6 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
+  test('Open Design catalog exposes every imported system', () {
+    expect(AnduraDesignSystems.all, hasLength(151));
+    expect(AnduraDesignSystems.byId('linear-app').name, 'Linear');
+    expect(AnduraDesignSystems.byId('missing').id, 'default');
+  });
+
+  test('catalog themes install contextual semantic tokens', () {
+    final theme = AnduraTheme.forSystem('airbnb', Brightness.light);
+    final tokens = theme.extension<AnduraThemeTokens>();
+    expect(tokens, isNotNull);
+    expect(tokens!.systemId, 'airbnb');
+    expect(theme.colorScheme.primary, tokens.accent);
+  });
+
   testWidgets('AnduraButton exposes its label and action', (tester) async {
     var pressed = false;
     await tester.pumpWidget(
@@ -153,6 +167,35 @@ void main() {
     await tester.tap(find.text('Option'));
     expect(choiceChanged, isFalse);
     expect(checkChanged, isFalse);
+  });
+
+  testWidgets('extended components consume selected design tokens', (
+    tester,
+  ) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AnduraTheme.forSystem('linear-app', Brightness.dark),
+        home: const Scaffold(
+          body: Column(
+            children: [
+              AnduraAlert(message: 'Saved', intent: AnduraIntent.success),
+              AnduraKeyboardKey(label: '⌘ K'),
+              AnduraProgress(value: .5, showPercentage: true),
+            ],
+          ),
+        ),
+      ),
+    );
+
+    expect(find.text('Saved'), findsOneWidget);
+    expect(find.text('⌘ K'), findsOneWidget);
+    expect(find.text('50%'), findsOneWidget);
+    expect(
+      Theme.of(
+        tester.element(find.text('Saved')),
+      ).extension<AnduraThemeTokens>()?.systemId,
+      'linear-app',
+    );
   });
 
   testWidgets('AnduraBadge renders its label', (tester) async {

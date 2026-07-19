@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../foundations/andura_colors.dart';
 import '../foundations/andura_tokens.dart';
+import '../theme/andura_design_system.dart';
 
 enum AnduraButtonVariant { primary, secondary, danger }
 
@@ -27,11 +28,11 @@ class AnduraButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colors = Theme.of(context).colorScheme;
+    final tokens = AnduraThemeTokens.of(context);
     final background = switch (variant) {
-      AnduraButtonVariant.primary => colors.primary,
-      AnduraButtonVariant.secondary => AnduraColors.mint,
-      AnduraButtonVariant.danger => colors.error,
+      AnduraButtonVariant.primary => tokens.accent,
+      AnduraButtonVariant.secondary => tokens.success,
+      AnduraButtonVariant.danger => tokens.danger,
     };
     final content = loading
         ? const SizedBox.square(
@@ -76,11 +77,12 @@ class AnduraBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final tokens = AnduraThemeTokens.of(context);
     final badgeColor = color ?? Theme.of(context).colorScheme.primaryContainer;
     return DecoratedBox(
       decoration: BoxDecoration(
         color: badgeColor,
-        borderRadius: BorderRadius.circular(AnduraRadii.pill),
+        borderRadius: BorderRadius.circular(tokens.radiusPill),
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(
@@ -165,18 +167,26 @@ class AnduraCard extends StatelessWidget {
   final VoidCallback? onTap;
 
   @override
-  Widget build(BuildContext context) => Material(
-    color: color ?? Theme.of(context).colorScheme.surfaceContainerLow,
-    borderRadius: BorderRadius.circular(AnduraRadii.lg),
-    clipBehavior: Clip.antiAlias,
-    child: InkWell(
-      onTap: onTap,
-      child: Padding(
-        padding: padding ?? const EdgeInsets.all(AnduraSpacing.lg),
-        child: child,
+  Widget build(BuildContext context) {
+    final tokens = AnduraThemeTokens.of(context);
+    return Material(
+      color: color ?? tokens.surface,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(tokens.radiusLg),
+        side: tokens.systemId == 'andura'
+            ? BorderSide.none
+            : BorderSide(color: tokens.border),
       ),
-    ),
-  );
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: onTap,
+        child: Padding(
+          padding: padding ?? EdgeInsets.all(tokens.space4),
+          child: child,
+        ),
+      ),
+    );
+  }
 }
 
 class AnduraSectionHeader extends StatelessWidget {
