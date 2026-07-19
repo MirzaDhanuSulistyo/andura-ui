@@ -40,6 +40,13 @@ MaterialApp(
 );
 ```
 
+Run the interactive component showcase with:
+
+```sh
+cd example
+flutter run
+```
+
 ## Package structure
 
 - `foundations`: colors, spacing, radii, sizing, typography, and motion

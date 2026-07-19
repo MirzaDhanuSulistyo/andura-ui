@@ -1,0 +1,15 @@
+name: andura_ui_example
+description: Component showcase for Andura UI.
+publish_to: none
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  andura_ui:
+    path: ../
+  flutter:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
