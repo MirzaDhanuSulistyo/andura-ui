@@ -1,0 +1,24 @@
+name: andura_ui
+description: Reusable foundations, themes, and accessible components for Andura Flutter applications.
+version: 0.1.0
+homepage: https://github.com/MirzaDhanuSulistyo/andura-ui
+
+repository: https://github.com/MirzaDhanuSulistyo/andura-ui
+issue_tracker: https://github.com/MirzaDhanuSulistyo/andura-ui/issues
+
+environment:
+  sdk: ^3.11.0
+  flutter: '>=3.41.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^8.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
