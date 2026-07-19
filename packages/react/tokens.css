@@ -1,19 +1,19 @@
 :root {
   --andura-color-primary: #6B72FF;
-  --andura-color-primaryDeep: #5C62FD;
+  --andura-color-primary-deep: #5C62FD;
   --andura-color-yellow: #FECC30;
   --andura-color-mint: #6BD4AE;
   --andura-color-red: #FF374B;
-  --andura-color-donutYellow: #FDF031;
+  --andura-color-donut-yellow: #FDF031;
   --andura-color-scaffold: #FFFFFF;
-  --andura-color-searchFill: #F8F8F8;
-  --andura-color-emphasizedSurface: #D4D6F3;
-  --andura-color-subtleSurface: #F6F4FC;
-  --andura-color-pastelMint: #F1F7EE;
-  --andura-color-pastelLavender: #F1EDFA;
-  --andura-color-pastelBlue: #DFEEF4;
-  --andura-color-textDark: #16161E;
-  --andura-color-textGray: #7B7B8B;
+  --andura-color-search-fill: #F8F8F8;
+  --andura-color-emphasized-surface: #D4D6F3;
+  --andura-color-subtle-surface: #F6F4FC;
+  --andura-color-pastel-mint: #F1F7EE;
+  --andura-color-pastel-lavender: #F1EDFA;
+  --andura-color-pastel-blue: #DFEEF4;
+  --andura-color-text-dark: #16161E;
+  --andura-color-text-gray: #7B7B8B;
   --andura-spacing-xs: 4px;
   --andura-spacing-sm: 8px;
   --andura-spacing-md: 12px;
@@ -28,21 +28,28 @@
   --andura-radius-sheet: 24px;
   --andura-radius-pill: 999px;
   --andura-size-control: 56px;
-  --andura-size-minimumTapTarget: 44px;
+  --andura-size-minimum-tap-target: 44px;
   --andura-size-icon: 20px;
   --andura-size-avatar: 40px;
   --andura-elevation-card: 0px;
   --andura-elevation-floating: 8px;
   --andura-elevation-dialog: 24px;
-  --andura-motion-fastMs: 150ms;
-  --andura-motion-standardMs: 250ms;
-  --andura-layout-maxContentWidth: 1200px;
-  --andura-layout-desktopGutter: 36px;
-  --andura-layout-tabletGutter: 24px;
-  --andura-layout-phoneGutter: 16px;
-  --andura-typography-fontFamily: Poppins;
-  --andura-typography-titleSize: 20px;
-  --andura-typography-sectionSize: 16px;
-  --andura-typography-labelSize: 14px;
-  --andura-typography-captionSize: 12px;
+  --andura-motion-fast-ms: 150ms;
+  --andura-motion-standard-ms: 250ms;
+  --andura-layout-max-content-width: 1200px;
+  --andura-layout-desktop-gutter: 36px;
+  --andura-layout-tablet-gutter: 24px;
+  --andura-layout-phone-gutter: 16px;
+  --andura-typography-font-family: Poppins;
+  --andura-typography-title-size: 20px;
+  --andura-typography-section-size: 16px;
+  --andura-typography-label-size: 14px;
+  --andura-typography-caption-size: 12px;
+}
+
+[data-theme='dark'] {
+  --andura-color-scaffold: #121218;
+  --andura-color-text-dark: #F5F5FA;
+  --andura-color-text-gray: #B2B2C2;
+  --andura-color-subtle-surface: #242432;
 }

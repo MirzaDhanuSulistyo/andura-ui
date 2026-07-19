@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Generate platform token files from tokens/andura_tokens.json."""
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -28,13 +29,23 @@ lines += ["}", ""]
 css = [":root {"]
 for group, values in source.items():
     for name, value in values.items():
-        css_name = f"--andura-{group}-{name.replace('_', '-')}"
+        kebab = re.sub(r"(?<!^)([A-Z])", r"-\1", name).lower().replace('_', '-')
+        css_name = f"--andura-{group}-{kebab}"
         if isinstance(value, (int, float)):
             suffix = "ms" if group == "motion" else "px"
             value = f"{value}{suffix}"
         css.append(f"  {css_name}: {value};")
-css += ["}", ""]
+css += ["}", "", "[data-theme='dark'] {", "  --andura-color-scaffold: #121218;", "  --andura-color-text-dark: #F5F5FA;", "  --andura-color-text-gray: #B2B2C2;", "  --andura-color-subtle-surface: #242432;", "}", ""]
 (ROOT / "packages/react/tokens.css").write_text("\n".join(css))
+
+ts = ["// GENERATED FILE - DO NOT EDIT.", "export const anduraTokens = {"]
+for group, values in source.items():
+    ts.append(f"  {group}: {{")
+    for name, value in values.items():
+        ts.append(f"    {name}: {json.dumps(value)},")
+    ts.append("  },")
+ts += ["} as const;", ""]
+(ROOT / "packages/react/tokens.ts").write_text("\n".join(ts))
 
 kotlin = ["// GENERATED FILE - DO NOT EDIT.", "package com.andura.ui", "", "object AnduraTokens {"]
 for group, values in source.items():

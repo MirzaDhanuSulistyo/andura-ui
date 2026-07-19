@@ -1,5 +1,6 @@
 # Miscellaneous
 node_modules/
+**/dist/
 *.class
 *.log
 *.pyc

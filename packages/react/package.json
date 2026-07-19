@@ -1,11 +1,23 @@
 {
   "name": "@andura-ui/react",
   "version": "0.1.0",
-  "private": true,
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/src/index.cjs",
+  "module": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js",
+      "require": "./dist/src/index.cjs"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./tokens.css": "./dist/tokens.css",
+    "./tokens": "./dist/tokens.js"
+  },
+  "files": ["dist"],
   "scripts": {
+    "build": "tsup src/index.tsx tokens.ts --format esm,cjs --dts --external react --clean && cp src/styles.css tokens.css dist/",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
   },
@@ -15,10 +27,12 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
+    "jest-axe": "^10.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "jsdom": "^26.0.0",
     "react": "^19.0.0",
+    "tsup": "^8.3.5",
     "react-dom": "^19.0.0",
     "typescript": "^5.7.0",
     "vitest": "^3.0.0"

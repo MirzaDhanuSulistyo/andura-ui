@@ -1,16 +1,16 @@
 @import url('../tokens.css');
 
-:root { font-family: var(--andura-typography-fontFamily), system-ui, sans-serif; color: var(--andura-color-textDark); }
+:root { font-family: var(--andura-typography-font-family), system-ui, sans-serif; color: var(--andura-color-text-dark); }
 .andura-btn, .andura-icon-btn, .andura-control { font: inherit; }
 .andura-btn { min-height: 56px; border: 0; border-radius: 999px; padding: 0 24px; cursor: pointer; transition: opacity 150ms ease, transform 150ms ease; }
 .andura-btn:hover:not(:disabled) { transform: translateY(-1px); }
 .andura-btn:disabled { opacity: .5; cursor: not-allowed; }
 .andura-btn-primary { color: white; background: var(--andura-color-primary); }
-.andura-btn-secondary { color: var(--andura-color-textDark); background: var(--andura-color-mint); }
+.andura-btn-secondary { color: var(--andura-color-text-dark); background: var(--andura-color-mint); }
 .andura-btn-danger { color: white; background: var(--andura-color-red); }
-.andura-btn-ghost { color: var(--andura-color-textDark); background: transparent; border: 1px solid var(--andura-color-textGray); }
+.andura-btn-ghost { color: var(--andura-color-text-dark); background: transparent; border: 1px solid var(--andura-color-text-gray); }
 .andura-icon-btn { min-width: 44px; min-height: 44px; border: 0; border-radius: 14px; background: transparent; cursor: pointer; font-size: 1.25rem; }
-.andura-icon-btn:hover { background: var(--andura-color-subtleSurface); }
+.andura-icon-btn:hover { background: var(--andura-color-subtle-surface); }
 .andura-card { padding: 16px; border-radius: 16px; background: white; border: 1px solid #edf1f6; }
 .andura-card-interactive { cursor: pointer; }
 .andura-field { display: grid; gap: 8px; margin-block: 12px; font-weight: 600; }
@@ -28,5 +28,19 @@
 .andura-badge-success { background: #dff5e9; color: #146c3a; }
 .andura-badge-warning { background: #fff1bd; color: #725500; }
 .andura-badge-danger { background: #ffe1e4; color: #a71928; }
+.andura-search { display: flex; align-items: center; gap: 12px; }
+.andura-search .andura-control { flex: 1; }
+.andura-empty { padding: 32px; text-align: center; color: var(--andura-color-text-gray); }
+.andura-loading-container { position: relative; }
+.andura-loading-overlay { position: absolute; inset: 0; display: grid; place-items: center; background: #00000033; }
+.andura-avatar { display: inline-grid; place-items: center; width: 40px; height: 40px; overflow: hidden; border: 0; border-radius: 50%; color: var(--andura-color-text-dark); background: var(--andura-color-emphasized-surface); font-weight: 600; }
+.andura-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.andura-notification { position: relative; display: inline-flex; }
+.andura-notification i { position: absolute; top: 7px; right: 7px; width: 8px; height: 8px; border-radius: 50%; background: var(--andura-color-red); }
+.andura-choice-row { display: flex; gap: 12px; }
+.andura-choice-row button { flex: 1; min-height: 44px; border: 0; border-radius: 14px; background: var(--andura-color-subtle-surface); }
+.andura-choice-row button[aria-pressed='true'] { color: white; background: var(--andura-color-primary); }
+.andura-check { display: flex; align-items: center; gap: 8px; }
+.andura-settings-tile { display: flex; justify-content: space-between; width: 100%; padding: 16px; border: 0; border-radius: 16px; background: white; text-align: left; }
 .andura-spinner { display: inline-block; width: 20px; height: 20px; border: 2px solid #ffffff80; border-top-color: white; border-radius: 50%; animation: andura-spin 700ms linear infinite; }
 @keyframes andura-spin { to { transform: rotate(360deg); } }

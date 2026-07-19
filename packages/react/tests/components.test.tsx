@@ -1,4 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
+import { axe } from 'jest-axe';
 import { describe, expect, it, vi } from 'vitest';
 import { Badge, Button, Dialog, TextArea } from '../src';
 
@@ -19,6 +20,11 @@ describe('form components', () => {
     render(<Badge tone="success">Active</Badge>);
     expect(screen.getByText('Active')).toHaveClass('andura-badge-success');
   });
+});
+
+it('has no basic accessibility violations', async () => {
+  const { container } = render(<><Button>Continue</Button><TextArea label="Description" /><Badge>Active</Badge></>);
+  expect((await axe(container)).violations.length).toBe(0);
 });
 
 it('opens and closes a dialog', () => {

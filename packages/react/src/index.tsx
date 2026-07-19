@@ -79,3 +79,34 @@ export function Badge({ children, tone = 'neutral' }: { children: ReactNode; ton
 }
 
 export function ErrorText({ children }: { children: ReactNode }) { return <p className="andura-error" role="alert">{children}</p>; }
+
+export function SearchField({ onFilter, ...props }: InputHTMLAttributes<HTMLInputElement> & { onFilter?: () => void }) {
+  return <div className="andura-search"><Input type="search" placeholder="Search" {...props} />{onFilter && <IconButton title="Filter" onClick={onFilter}>⚙</IconButton>}</div>;
+}
+
+export function EmptyState({ message }: { message: ReactNode }) { return <div className="andura-empty" role="status">{message}</div>; }
+
+export function LoadingOverlay({ loading, children }: { loading: boolean; children: ReactNode }) {
+  return <div className="andura-loading-container">{children}{loading && <div className="andura-loading-overlay" role="status" aria-label="Loading"><span className="andura-spinner" /></div>}</div>;
+}
+
+export function Avatar({ name, src, onClick }: { name: string; src?: string; onClick?: () => void }) {
+  const content = src ? <img src={src} alt={name} /> : name.trim().slice(0, 1).toUpperCase() || '?';
+  return onClick ? <button className="andura-avatar" onClick={onClick} aria-label="Open profile">{content}</button> : <span className="andura-avatar">{content}</span>;
+}
+
+export function NotificationButton({ hasNotification = false, onClick }: { hasNotification?: boolean; onClick?: () => void }) {
+  return <span className="andura-notification"><IconButton title="Notifications" onClick={onClick}>♢</IconButton>{hasNotification && <i aria-label="Unread notifications" />}</span>;
+}
+
+export function ChoiceRow({ values, value, onChange, disabled = false }: { values: string[]; value: string; onChange: (value: string) => void; disabled?: boolean }) {
+  return <div className="andura-choice-row" role="group">{values.map(item => <button key={item} disabled={disabled} aria-pressed={item === value} onClick={() => onChange(item)}>{item}</button>)}</div>;
+}
+
+export function CheckOption({ label, checked, onChange, disabled = false }: { label: string; checked: boolean; onChange: (checked: boolean) => void; disabled?: boolean }) {
+  return <label className="andura-check"><input type="checkbox" checked={checked} disabled={disabled} onChange={event => onChange(event.target.checked)} />{label}</label>;
+}
+
+export function SettingsTile({ title, onClick, children }: { title: string; onClick?: () => void; children?: ReactNode }) {
+  return <button className="andura-settings-tile" onClick={onClick}><span>{title}</span>{children ?? '›'}</button>;
+}
